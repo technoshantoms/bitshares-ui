@@ -12,6 +12,7 @@ var fs = require("fs");
  * For staging builds, set the version to the latest commit hash, for
  * production set it to the package version
  */
+
 let branch = !!process.env.BRANCH ? process.env.BRANCH : git.branch();
 var __VERSION__ =
     branch === "develop" ? git.short() : require("./package.json").version;
@@ -73,7 +74,7 @@ module.exports = function(env) {
         new HtmlWebpackPlugin({
             template: "!!handlebars-loader!app/assets/index.hbs",
             templateParameters: {
-                title: "BitShares " + __VERSION__,
+                title: "AcloudBank " + __VERSION__,
                 INCLUDE_BASE: !!env.prod && !env.hash,
                 PRODUCTION: !!env.prod,
                 ELECTRON: !!env.electron
@@ -88,7 +89,7 @@ module.exports = function(env) {
             __UI_API__: JSON.stringify(env.apiUrl),
             __TESTNET__: !!env.testnet,
             __DEPRECATED__: !!env.deprecated,
-            DEFAULT_SYMBOL: "BTS",
+            DEFAULT_SYMBOL: "TEST",
             __GIT_BRANCH__: JSON.stringify(git.branch()),
             __PERFORMANCE_DEVTOOL__: !!env.perf_dev
         }),
@@ -105,14 +106,14 @@ module.exports = function(env) {
                 {
                     from: path.join(root_dir, "charting_library"),
                     to: "charting_library"
+                },
+                {
+                    from: path.join(root_dir, "static")
                 }
             ]
         }),
         new webpack.ProvidePlugin({
             Buffer: ["buffer", "Buffer"]
-        }),
-        new webpack.ProvidePlugin({
-            process: ["process", "process"]
         })
     ];
     if (env.prod) {
@@ -315,6 +316,11 @@ module.exports = function(env) {
                     use: "null-loader"
                 },
                 {
+                    test: /\.(ts|tsx)$/,
+                    use: "ts-loader",
+                    exclude: /node_modules/
+                },
+                {
                     test: /\.jsx$/,
                     include: [
                         path.join(root_dir, "app"),
@@ -388,6 +394,7 @@ module.exports = function(env) {
                     test: /\.png$/,
                     exclude: [
                         path.resolve(root_dir, "app/assets/asset-symbols"),
+                        path.resolve(root_dir, "app/assets/images"),
                         path.resolve(
                             root_dir,
                             "app/assets/language-dropdown/img"
@@ -459,7 +466,7 @@ module.exports = function(env) {
                 path.resolve(root_dir, "app/lib"),
                 "node_modules"
             ],
-            extensions: [".js", ".jsx", ".coffee", ".json"],
+            extensions: [".ts", ".tsx", ".js", ".jsx", ".coffee", ".json"],
             mainFields: ["module", "jsnext:main", "browser", "main"],
             alias: alias,
             fallback: {
@@ -467,7 +474,12 @@ module.exports = function(env) {
                 constants: require.resolve("constants-browserify"),
                 stream: require.resolve("stream-browserify"),
                 path: require.resolve("path-browserify"),
-                buffer: require.resolve("buffer")
+                buffer: require.resolve("buffer"),
+                http: require.resolve("stream-http"),
+                https: require.resolve("https-browserify"),
+                os: require.resolve("os-browserify"),
+                url: require.resolve("url"),
+                zlib: require.resolve("browserify-zlib")
             }
         },
         plugins: plugins
