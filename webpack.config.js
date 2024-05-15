@@ -12,7 +12,6 @@ var fs = require("fs");
  * For staging builds, set the version to the latest commit hash, for
  * production set it to the package version
  */
-
 let branch = !!process.env.BRANCH ? process.env.BRANCH : git.branch();
 var __VERSION__ =
     branch === "develop" ? git.short() : require("./package.json").version;
@@ -89,7 +88,7 @@ module.exports = function(env) {
             __UI_API__: JSON.stringify(env.apiUrl),
             __TESTNET__: !!env.testnet,
             __DEPRECATED__: !!env.deprecated,
-            DEFAULT_SYMBOL: "TEST",
+            DEFAULT_SYMBOL: "BTS",
             __GIT_BRANCH__: JSON.stringify(git.branch()),
             __PERFORMANCE_DEVTOOL__: !!env.perf_dev
         }),
@@ -114,6 +113,9 @@ module.exports = function(env) {
         }),
         new webpack.ProvidePlugin({
             Buffer: ["buffer", "Buffer"]
+        }),
+        new webpack.ProvidePlugin({
+            process: ["process", "process"]
         })
     ];
     if (env.prod) {
@@ -394,7 +396,6 @@ module.exports = function(env) {
                     test: /\.png$/,
                     exclude: [
                         path.resolve(root_dir, "app/assets/asset-symbols"),
-                        path.resolve(root_dir, "app/assets/images"),
                         path.resolve(
                             root_dir,
                             "app/assets/language-dropdown/img"
