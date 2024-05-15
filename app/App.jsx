@@ -16,12 +16,12 @@ import Footer from "./components/Layout/Footer";
 import Deprecate from "./Deprecate";
 import Incognito from "./components/Layout/Incognito";
 import {isIncognito} from "feature_detect";
-import {updateGatewayBackers} from "common/gatewayUtils";
+//import {updateGatewayBackers} from "common/gatewayUtils";
 import titleUtils from "common/titleUtils";
 import {BodyClassName, Notification} from "bitshares-ui-style-guide";
 import {DEFAULT_NOTIFICATION_DURATION} from "services/Notification";
 import Loadable from "react-loadable";
-import NewsHeadline from "components/Layout/NewsHeadline";
+//import NewsHeadline from "components/Layout/NewsHeadline";
 
 import {Route, Switch, Redirect} from "react-router-dom";
 
@@ -84,11 +84,11 @@ const AccountDepositWithdraw = Loadable({
     loading: LoadingIndicator
 });
 
-const News = Loadable({
-    loader: () => import(/* webpackChunkName: "news" */ "./components/News"),
-    loading: LoadingIndicator
-});
-
+//const News = Loadable({
+//    loader: () => import(/* webpackChunkName: "news" */ "./components/News"),
+//    loading: LoadingIndicator
+//});
+//
 const Settings = Loadable({
     loader: () =>
         import(
@@ -212,10 +212,16 @@ import AccountRegistration from "./components/Registration/AccountRegistration";
 import {CreateWalletFromBrainkey} from "./components/Wallet/WalletCreate";
 import ShowcaseGrid from "./components/Showcases/ShowcaseGrid";
 import PriceAlertNotifications from "./components/PriceAlertNotifications";
-import GatewaySelectorModal from "./components/Gateways/GatewaySelectorModal";
-import SettingsStore from "./stores/SettingsStore";
-import GatewayActions from "./actions/GatewayActions";
+//import GatewaySelectorModal from "./components/Gateways/GatewaySelectorModal";
+//import SettingsStore from "./stores/SettingsStore";
+//import GatewayActions from "./actions/GatewayActions";
 import {allowedGateway} from "./branding";
+
+import Deposit from "./components/Account/Deposit/Index";
+import Withdraw from "./components/Account/Withdraw/Index";
+import {RegistrationServiceAPI} from "./api/apiConfig";
+import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
+//import AccountRegistration from "./components/Registration/AccountRegistration";
 
 class App extends React.Component {
     constructor() {
@@ -364,11 +370,7 @@ class App extends React.Component {
                 this.setState({incognito});
             }.bind(this)
         );
-        GatewayActions.loadOnChainGatewayConfig();
-
-        if (allowedGateway()) {
-            this._ensureExternalServices();
-        }
+     
     }
 
     _ensureExternalServices() {
@@ -495,7 +497,10 @@ class App extends React.Component {
                     : "committee-account";
             content = (
                 <div className="grid-frame vertical">
-                    <NewsHeadline />
+                <GoogleReCaptchaProvider
+                        reCaptchaKey={RegistrationServiceAPI.ReCAPTCHA_KEY}
+                    >
+                   
                     <Header height={this.state.height} {...others} />
                     <div id="mainContainer" className="grid-block">
                         <div className="grid-block vertical">
@@ -535,6 +540,14 @@ class App extends React.Component {
                                     exact
                                     component={AccountDepositWithdraw}
                                 />
+                                 <Route
+                                        path="/withdraw"
+                                        component={Withdraw}
+                                />
+                                <Route
+                                        path="/deposit"
+                                        component={Deposit}
+                                />
                                 <Route
                                     path="/create-account"
                                     component={LoginSelector}
@@ -555,7 +568,6 @@ class App extends React.Component {
                                     exact
                                     component={AccountRegistration}
                                 />
-                                <Route path="/news" exact component={News} />
                                 <Redirect
                                     path={"/voting"}
                                     to={{
@@ -651,6 +663,7 @@ class App extends React.Component {
                             </Switch>
                         </div>
                     </div>
+                    </GoogleReCaptchaProvider>
                     <Footer
                         synced={this.state.synced}
                         history={this.props.history}
@@ -700,10 +713,7 @@ class App extends React.Component {
                             hideModal={this.hideBrowserSupportModal}
                             showModal={this.showBrowserSupportModal}
                         />
-                        <GatewaySelectorModal
-                            visible={this.state.isGatewaySelectorModalVisible}
-                            hideModal={this.hideGatewaySelectorModal}
-                        />
+    
                     </div>
                 </BodyClassName>
             </div>

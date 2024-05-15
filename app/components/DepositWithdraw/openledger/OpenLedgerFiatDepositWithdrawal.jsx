@@ -297,10 +297,10 @@ class OpenLedgerFiatDepositWithdrawal extends React.Component {
                                 rpc_url={this.props.rpc_url}
                                 account={this.props.account}
                                 issuer_account={this.props.issuer_account}
-                                deposit_asset="USD"
+                                deposit_asset="TEST"
                                 receive_asset="OPEN.USD"
-                                deposit_allowed={this.state.allowedFiatCurrencies.deposit.indexOf("USD") > -1}
-                                withdraw_allowed={this.state.allowedFiatCurrencies.withdraw.indexOf("USD") > -1}/>
+                                deposit_allowed={this.state.allowedFiatCurrencies.deposit.indexOf("TEST") > -1}
+                                withdraw_allowed={this.state.allowedFiatCurrencies.withdraw.indexOf("TEST") > -1}/>
                             <OpenLedgerFiatDepositWithdrawCurrency
                                 rpc_url={this.props.rpc_url}
                                 account={this.props.account}

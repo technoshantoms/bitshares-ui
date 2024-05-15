@@ -144,6 +144,32 @@ class CreditOfferPage extends React.Component {
                 dataIndex: "id"
             },
             {
+                title: counterpart.translate("credit_offer.borrow"),
+                key: "action",
+                render: (_, row) => {
+                    return (
+                        <span style={{fontSize: 20}}>
+                            <Tooltip
+                                title={counterpart.translate(
+                                    "credit_offer.borrow"
+                                )}
+                            >
+                                <AntIcon
+                                    type="dollar"
+                                    style={{
+                                        cursor: "pointer",
+                                        marginRight: "20px"
+                                    }}
+                                    onClick={() => {
+                                        this.showAcceptModal(row);
+                                    }}
+                                />
+                            </Tooltip>
+                        </span>
+                    );
+                }
+            },
+            {
                 title: counterpart.translate("credit_offer.asset"),
                 dataIndex: "asset_type",
                 render: text => <LinkToAssetById asset={text} />
@@ -253,32 +279,6 @@ class CreditOfferPage extends React.Component {
                             <LinkToAssetById asset={v[0]} />
                         </div>
                     ));
-                }
-            },
-            {
-                title: counterpart.translate("credit_offer.borrow"),
-                key: "action",
-                render: (_, row) => {
-                    return (
-                        <span style={{fontSize: 20}}>
-                            <Tooltip
-                                title={counterpart.translate(
-                                    "credit_offer.borrow"
-                                )}
-                            >
-                                <AntIcon
-                                    type="dollar"
-                                    style={{
-                                        cursor: "pointer",
-                                        marginRight: "20px"
-                                    }}
-                                    onClick={() => {
-                                        this.showAcceptModal(row);
-                                    }}
-                                />
-                            </Tooltip>
-                        </span>
-                    );
                 }
             }
         ];

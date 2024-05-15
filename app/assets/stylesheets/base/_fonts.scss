@@ -88,12 +88,12 @@ h6 {
 
 .json-inspector__key {
     @include MonospaceFont;
-    text-transform: none !important;
+    text-transform: none;
 }
 
 .json-inspector__value {
     @include MonospaceFont;
-    text-transform: none !important;
+    text-transform: none;
 }
 
 button,

@@ -210,6 +210,7 @@ class CreateAccount extends React.Component {
             this.createAccount(account_name);
         } else {
             let password = this.refs.password.value();
+            //let password = this.refs.password.state.password;
             this.createWallet(password).then(() =>
                 this.createAccount(account_name)
             );

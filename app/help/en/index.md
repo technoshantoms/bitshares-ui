@@ -1,37 +1,25 @@
-# Help
-
-This is the reference wallet of BitShares Blockchain which connects to BitShares Blockchain nodes (bitshares-core).
+# R-Squared Help
 
 This help section gives a brief overview and describes the most basic concepts
 of this application.
 
+The RQRX token used in this Test Net is purely for test purposes,
+and is not the token that will be used in Main Net.
+
 ## Introduction 
- * [Disclaimer](disclaimer.md)
- * [BitShares](introduction/bitshares.md)
  * [Wallet](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)
- * [Witnesses](introduction/witness.md)
- * [Workers](introduction/workers.md)
- * [Committe Members](introduction/committee.md)
+ * [Voting](voting.md)
 
 ## Accounts
  * [Introduction](accounts/general.md)
  * [Permissions](accounts/permissions.md)
- * [Memberships](accounts/membership.md)
-
-## Assets
- * [Market Pegged Assets](assets/mpa.md) (BitUSD, BitEUR, BitGOLD, Bit\*,...)
- * [User Issued Assets](assets/uia.md)
- * [Privatized BitAssets](assets/privbitassets.md)
-
-## Decentralized Exchange
- * [Introduction](dex/introduction.md)
- * [Trading](dex/trading.md)
- * [Short Selling BitAssets](dex/shorting.md)
+ <!-- * [Memberships](accounts/membership.md) -->
 
 ## Development
- * [Bitshares UI Github](https://github.com/bitshares/bitshares-ui)
+ * [R-Squared Github](https://github.com/R-Squared-Project/R-Squared-core)
+ * [R-Squared Website](https://rsquared.digital/)
 
 ----------
-[Glossary](glossary.md)
+<!-- [Glossary](glossary.md) -->

@@ -299,8 +299,8 @@ class Exchange extends React.Component {
         let ws = props.viewSettings;
         let {ask, bid} = this._initialOrderState(props);
 
-        let chart_height = ws.get("chartHeight", 620);
-        if (chart_height == 620 && window.innerWidth < 640) {
+        let chart_height = ws.get("chartHeight", 350);
+        if (chart_height == 350 && window.innerWidth < 300) {
             // assume user is on default setting, use smaller for mobile
             chart_height = 425;
         }
@@ -2100,9 +2100,9 @@ class Exchange extends React.Component {
                     "exchange--buy-sell-form",
                     verticalOrderForm && !smallScreen
                         ? ""
-                        : centerContainerWidth > 1200
+                        : centerContainerWidth > 900
                         ? "medium-6 large-6 xlarge-4"
-                        : centerContainerWidth > 800
+                        : centerContainerWidth > 400
                         ? "medium-6"
                         : "",
                     "small-12 exchange-padded middle-content",
@@ -2266,9 +2266,9 @@ class Exchange extends React.Component {
                     "exchange--buy-sell-form",
                     verticalOrderForm && !smallScreen
                         ? ""
-                        : centerContainerWidth > 1200
+                        : centerContainerWidth > 900
                         ? "medium-6 large-6 xlarge-4"
-                        : centerContainerWidth > 800
+                        : centerContainerWidth > 400
                         ? "medium-6"
                         : "",
                     "small-12 exchange-padded middle-content",
@@ -2491,9 +2491,9 @@ class Exchange extends React.Component {
                     orderBookReversed={orderBookReversed}
                     marketReady={marketReady}
                     wrapperClass={cnames(
-                        centerContainerWidth > 1200
+                        centerContainerWidth > 900
                             ? "xlarge-8"
-                            : centerContainerWidth > 800
+                            : centerContainerWidth > 400
                             ? ""
                             : "",
                         "medium-12 large-12",
@@ -2503,9 +2503,9 @@ class Exchange extends React.Component {
                         }`
                     )}
                     innerClass={cnames(
-                        centerContainerWidth > 1200
+                        centerContainerWidth > 900
                             ? "medium-6"
-                            : centerContainerWidth > 800
+                            : centerContainerWidth > 400
                             ? "medium-6 large-6"
                             : "",
                         "small-12 middle-content",
@@ -2555,9 +2555,9 @@ class Exchange extends React.Component {
                     key={`actionCard_${actionCardIndex++}`}
                     className={cnames(
                         panelTabs["history"] == 0
-                            ? centerContainerWidth > 1200
+                            ? centerContainerWidth > 900
                                 ? "medium-6 large-6 xlarge-4"
-                                : centerContainerWidth > 800
+                                : centerContainerWidth > 400
                                 ? "medium-6"
                                 : ""
                             : "medium-12",
@@ -2587,9 +2587,9 @@ class Exchange extends React.Component {
                     key={`actionCard_${actionCardIndex++}`}
                     className={cnames(
                         panelTabs["my_history"] == 0
-                            ? centerContainerWidth > 1200
+                            ? centerContainerWidth > 900
                                 ? "medium-6 large-6 xlarge-4"
-                                : centerContainerWidth > 800
+                                : centerContainerWidth > 400
                                 ? "medium-6"
                                 : ""
                             : "medium-12",
@@ -2623,9 +2623,9 @@ class Exchange extends React.Component {
                     style={{marginBottom: !tinyScreen ? 15 : 0}}
                     className={cnames(
                         panelTabs["my_orders"] == 0
-                            ? centerContainerWidth > 1200
+                            ? centerContainerWidth > 900
                                 ? "medium-6 large-6 xlarge-4"
-                                : centerContainerWidth > 800
+                                : centerContainerWidth > 400
                                 ? "medium-6"
                                 : ""
                             : "medium-12",
@@ -2662,9 +2662,9 @@ class Exchange extends React.Component {
                     style={{marginBottom: !tinyScreen ? 15 : 0}}
                     className={cnames(
                         panelTabs["open_settlement"] == 0
-                            ? centerContainerWidth > 1200
+                            ? centerContainerWidth > 900
                                 ? "medium-6 large-6 xlarge-4"
-                                : centerContainerWidth > 800
+                                : centerContainerWidth > 400
                                 ? "medium-6"
                                 : ""
                             : "medium-12",
@@ -3025,11 +3025,11 @@ class Exchange extends React.Component {
                 <div
                     key={`actionCard_${actionCardIndex++}`}
                     className={cnames(
-                        centerContainerWidth > 1200
+                        centerContainerWidth > 900
                             ? groupTabsCount == 1
                                 ? "medium-12 xlarge-4"
                                 : "medium-6 xlarge-4 "
-                            : centerContainerWidth > 800
+                            : centerContainerWidth > 400
                             ? groupTabsCount == 1
                                 ? "medium-12"
                                 : "medium-6"
@@ -3058,11 +3058,11 @@ class Exchange extends React.Component {
                 <div
                     key={`actionCard_${actionCardIndex++}`}
                     className={cnames(
-                        centerContainerWidth > 1200
+                        centerContainerWidth > 900
                             ? groupTabsCount == 1
                                 ? "medium-12 xlarge-4"
                                 : "medium-6 xlarge-4 "
-                            : centerContainerWidth > 800
+                            : centerContainerWidth > 400
                             ? groupTabsCount == 1
                                 ? "medium-12"
                                 : "medium-6"
@@ -3084,7 +3084,7 @@ class Exchange extends React.Component {
             groupTabsCount > 2 ? null : (
                 <div
                     className={cnames(
-                        centerContainerWidth > 1200 &&
+                        centerContainerWidth > 900 &&
                             (verticalOrderBook || verticalOrderBook)
                             ? "xlarge-order-6 xlarge-8 order-9"
                             : "",

@@ -622,7 +622,7 @@ class Header extends React.Component {
                                 usernameViewIcon
                             />
                         </div>
-                        {walletBalance}
+                       {/* {walletBalance} */}
                     </div>
 
                     {hasLocalWallet && (

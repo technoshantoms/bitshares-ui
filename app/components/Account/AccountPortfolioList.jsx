@@ -413,7 +413,7 @@ class AccountPortfolioList extends React.Component {
     }
 
     _renderBuy = (symbol, canBuy, assetName, emptyCell, balance) => {
-        if (symbol === "BTS" && balance <= 1000000) {
+        if (symbol === "TEST" && balance <= 1000000) {
             // Precision of 5, 1 = 10^5
             return (
                 <span>
@@ -913,7 +913,7 @@ class AccountPortfolioList extends React.Component {
                 asset.getIn(["options", "description"])
             );
             symbol = asset.get("symbol");
-            if (symbol.indexOf("OPEN.") !== -1 && !market) market = "USD";
+            if (symbol.indexOf("OPEN.") !== -1 && !market) market = "TEST";
             let preferredMarket = market ? market : preferredUnit;
 
             if (notCore && preferredMarket === symbol)
@@ -1003,7 +1003,7 @@ class AccountPortfolioList extends React.Component {
             );
             const canDeposit =
                 (backedCoin && backedCoin.depositAllowed) ||
-                asset.get("symbol") == "BTS";
+                asset.get("symbol") == "TEST";
 
             const canWithdraw =
                 backedCoin &&
@@ -1246,7 +1246,7 @@ class AccountPortfolioList extends React.Component {
                                 .find(
                                     a => a.backingCoin === thisAssetName[1]
                                 ) ||
-                            asset.get("symbol") == "BTS";
+                            asset.get("symbol") == "TEST";
 
                         const canBuy = !!this.props.bridgeCoins.get(
                             asset.get("symbol")
@@ -1260,7 +1260,7 @@ class AccountPortfolioList extends React.Component {
                             asset.get("symbol").indexOf("OPEN.") !== -1 &&
                             !market
                         )
-                            market = "USD";
+                            market = "TEST";
                         let preferredMarket = market ? market : coreSymbol;
 
                         let directMarketLink = notCore ? (
@@ -1466,9 +1466,9 @@ class AccountPortfolioList extends React.Component {
                 atLeastOneHas.buy = true;
             }
             if (!!_item.deposit && _item.deposit !== "-") {
-                if (_item.key == "BTS" && GatewayStore.anyAllowed()) {
+                if (_item.key == "TEST" && GatewayStore.anyAllowed()) {
                     atLeastOneHas.depositOnlyBTS =
-                        _item.key == "BTS" && !atLeastOneHas.deposit;
+                        _item.key == "TEST" && !atLeastOneHas.deposit;
                     atLeastOneHas.deposit = true;
                 }
             }

@@ -23,6 +23,7 @@ import AccountSignedMessages from "./AccountSignedMessages";
 import AccountWhitelist from "./AccountWhitelist";
 import AccountVoting from "./AccountVoting";
 import AccountOverview from "./AccountOverview";
+import {showAssetsAccounts} from "../../branding";
 
 class AccountPage extends React.Component {
     static propTypes = {

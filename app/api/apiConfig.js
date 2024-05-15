@@ -1,4 +1,9 @@
 import {getFaucet, getTestFaucet} from "../branding";
+import {
+    EES_BASE_URL,
+    RECAPTCHA_KEY,
+    REGISTRATION_SERVICE_BASE_URL
+} from "./env.js";
 
 export const ioxbankAPIs = {
     BASE: "https://api.ioxbank.com/bitshares",
@@ -64,7 +69,7 @@ export const citadelAPIs = {
 };
 
 export const gdex2APIs = {
-    BASE: "https://openapi.52bts.net/adjust",
+    BASE: "https://api.52bts.net/adjust",
     COINS_LIST: "/coins",
     ACTIVE_WALLETS: "/active-wallets",
     TRADING_PAIRS: "/trading-pairs"
@@ -86,13 +91,8 @@ export const gdexAPIs = {
     WITHDRAW_RULE: "/gateway/withdraw/rule"
 };
 
-export const pirateCashAPIs = {
-    BASE: "https://piratecash.net/dexapi",
-    COINS_LIST: "/coins"
-};
-
 export const xbtsxAPIs = {
-    BASE: "https://apis.xbts.io/api/v2",
+    BASE: "https://apis.xbts.io/api/v1",
     COINS_LIST: "/coin"
 };
 
@@ -131,198 +131,38 @@ export const settingsAPIs = {
         {
             url: "wss://fake.automatic-selection.com",
             location: {translate: "settings.api_closest"}
+        },{
+            url: "ws://127.0.0.1:8090/ws",
+            location: "Cloud hosted"
         },
         {
-            url: "ws://127.0.0.1:8090",
-            location: "Locally hosted"
-        },
-        {
-            url: "wss://dex.iobanker.com/ws",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Frankfurt",
-            operator: "Witness: iobanker-core",
-            contact: "email:admin@iobanker.com"
-        },
-        {
-            url: "wss://api.bts.btspp.io:10100",
-            region: "Eastern Asia",
-            country: "China",
-            location: "Hangzhou",
-            operator: "Witness: btspp-witness",
-            contact: "telegram:btsplusplus"
-        },
-        {
-            url: "wss://api.bts.mobi/ws",
-            region: "Northern America",
-            country: "U.S.A.",
-            location: "Virginia",
-            operator: "Witness: in.abit",
-            contact: "telegram:abitmore"
-        },
-        {
-            url: "wss://btsws.roelandp.nl/ws",
-            region: "Northern Europe",
-            country: "Finland",
-            location: "Helsinki",
-            operator: "Witness: roelandp",
-            contact: "telegram:roelandp"
-        },
-        {
-            url: "wss://btsapi.magicw.net/ws",
-            region: "Eastern Asia",
-            country: "China",
-            location: "Hangzhou",
-            operator: "Witness: magicwallet.witness",
-            contact: "telegram:plus_wave"
-        },
-        {
-            url: "wss://api.61bts.com",
-            region: "Eastern Asia",
-            country: "China",
-            location: "Shandong",
-            operator: "Witness: liuye",
-            contact: "email:work@akawa.ink"
-        },
-        {
-            url: "wss://api-us.61bts.com",
-            region: "Northern America",
-            country: "USA",
-            location: "St. Louis",
-            operator: "Witness: liuye",
-            contact: "email:work@akawa.ink"
-        },
-        {
-            url: "wss://api.dex.trading/",
-            region: "Western Europe",
-            country: "France",
-            location: "Paris",
-            operator: "Witness: zapata42-witness",
-            contact: "telegram:Zapata_42"
-        },
-        {
-            url: "wss://eu.nodes.bitshares.ws",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: blocksights",
-            contact: "telegram:blocksights"
-        },
-        {
-            url: "wss://public.xbts.io/ws",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: xbtsio-wallet",
-            contact: "telegram: xbtsio"
-        },
-        {
-            url: "wss://cloud.xbts.io/ws",
-            region: "Northern America",
-            country: "U.S.A.",
-            location: "VG, Ashburn",
-            operator: "Witness: xbtsio-wallet",
-            contact: "telegram: xbtsio"
-        },
-        {
-            url: "wss://node.xbts.io/ws",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Falkenstein",
-            operator: "Witness: xbtsio-wallet",
-            contact: "telegram: xbtsio"
-        },
-        {
-            url: "wss://bts.mypi.win",
-            region: "Northern America",
-            country: "U.S.A.",
-            location: "Seattle, CA",
-            operator: "Witness: gbac-ety001",
-            contact: "email:work@akawa.ink"
-        },
-        {
-            url: "wss://api.btslebin.com/ws",
-            region: "Eastern Asia",
-            country: "China",
-            location: "Hong Kong",
-            operator: "Witness: lebin-witness",
-            contact: "telegram: lebinbit"
-        },
-        {
-            url: "wss://bitsharesapi.loclx.io",
-            region: "North America",
-            country: "United States",
-            location: "Chicago",
-            operator: "bitshares.info",
-            contact: "telegram:brekyrself"
-        },
-        // Testnet
-        {
-            url: "wss://eu.nodes.testnet.bitshares.ws",
-            region: "TESTNET - Western Europe",
-            country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: blocksights",
-            contact: "telegram:blocksights"
-        },
-        {
-            url: "wss://testnet.dex.trading/",
-            region: "TESTNET - Western Europe",
-            country: "France",
-            location: "Paris",
-            operator: "Witness: zapata42-witness",
-            contact: "telegram:Zapata_42"
-        },
-        {
-            url: "wss://testnet.xbts.io/ws",
-            region: "TESTNET - Europe",
-            country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: xbtsio-wallet",
-            contact: "telegram: xbtsio"
-        },
-        {
-            url: "wss://api-testnet.61bts.com/ws",
-            region: "Eastern Asia",
-            country: "China",
-            location: "Shandong",
-            operator: "Witness: liuye",
-            contact: "email:work@akawa.ink"
-        },
-        {
-            url: "wss://api-us-testnet.61bts.com/ws",
-            region: "Northern America",
-            country: "USA",
-            location: "St. Louis",
-            operator: "Witness: liuye",
-            contact: "email:work@akawa.ink"
-        },
-        {
-            url: "wss://btstestnet.cybertron.ninja/ws",
-            region: "Northern America",
-            country: "USA",
-            location: "Utah",
-            operator: "Witness: cn-faucet-test",
-            contact: "email:codinheim@protonmail.com"
-        },
-        {
-            url: "wss://bitsharestestnet.loclx.io",
-            region: "Northern America",
-            country: "USA",
-            location: "Chicago",
-            operator: "bitshares.info",
-            contact: "telegram:brekyrself"
-        },
-    ],
-    ES_WRAPPER_LIST: [
-        {
-            url: "https://api.bitshares.ws/openexplorer",
-            region: "Western Europe",
-            country: "Germany",
-            operator: "blocksights.info",
-            contact: "telegram:blocksights"
+            url: "wss://api.acloudbank.com/ws",
+            location: "Multi-Nationally hosted"
         }
     ],
+    ES_WRAPPER_LIST: [],
     DEFAULT_FAUCET: getFaucet().url,
     TESTNET_FAUCET: getTestFaucet().url
 };
+
+
+export const EesAPI = {
+    BASE: EES_BASE_URL,
+    EES_SETTINGS: "/settings",
+    SUBMIT_DEPOSIT_REQUEST: "/deposit",
+    SUBMIT_WITHDRAW_REQUEST: "/withdraw",
+    CHECK_DEPOSIT_SUBMITTED_TO_INTERNAL_BLOCKCHAIN: "/deposit/submitted",
+    GET_WITHDRAW_EXTERNAL_CONTRACT_ID: "/withdraw/get-external-contract-id",
+    GET_DEPOSIT_EXTERNAL_CONTRACT_ID: "/deposit/get-external-contract-id",
+    GET_DEPOSITS_STATUSES: "/deposit/get-statuses"
+};
+
+export const RegistrationServiceAPI = {
+    BASE: REGISTRATION_SERVICE_BASE_URL,
+    ACCOUNTS_ENDPOINT: "/api/v1/accounts",
+    ReCAPTCHA_KEY: RECAPTCHA_KEY
+};
+
+//export const TokenDistributionAPI = {
+//    PHRASE: "I {RQRX_USER_NAME} want to claim RQRX tokens. {DATE}."
+//};

@@ -40,7 +40,7 @@ class DepositWithdrawAssetSelector extends React.Component {
                                 label: backedCoin,
                                 gateway: gateway,
                                 gateFee: item.gateFee,
-                                issuer: item.issuerId || "1.2.96397" //Fall back to open ledger
+                                issuer: item.issuerId || "1.2.6" //Fall back to open ledger
                             };
                         } else {
                             return null;
@@ -51,7 +51,7 @@ class DepositWithdrawAssetSelector extends React.Component {
                     return item;
                 })
                 .filter(item => {
-                    if (item.id == "BTS") {
+                    if (item.id == "TEST") {
                         return true;
                     }
                     if (include) {
@@ -62,7 +62,7 @@ class DepositWithdrawAssetSelector extends React.Component {
         });
 
         if (!(includeBTS === false)) {
-            assets.push({id: "BTS", label: "BTS", gateway: ""});
+            assets.push({id: "TEST", label: "TEST", gateway: ""});
         }
 
         this.setState({

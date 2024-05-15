@@ -376,7 +376,7 @@ class Asset extends React.Component {
                 preferredMarket = core_asset_symbol;
             }
         }
-        if (asset.symbol === core_asset_symbol) preferredMarket = "USD";
+        if (asset.symbol === core_asset_symbol) preferredMarket = "TEST";
         if (urls && urls.length) {
             urls.forEach(url => {
                 let markdownUrl = `<a target="_blank" class="external-link" rel="noopener noreferrer" href="${url}">${url}</a>`;
@@ -1472,7 +1472,7 @@ class Asset extends React.Component {
         // options.blacklist_authorities = ["1.2.3", "1.2.4"];
         // options.whitelist_authorities = ["1.2.1", "1.2.2"];
         // options.blacklist_markets = ["JPY", "RUB"];
-        // options.whitelist_markets = ["USD", "EUR", "GOLD"];
+        // options.whitelist_markets = ["TEST", "EUR", "GOLD"];
 
         // options.max_market_fee initially a string
         var maxMarketFee = permissionBooleans["charge_market_fee"] ? (

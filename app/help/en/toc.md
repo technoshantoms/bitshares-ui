@@ -1,7 +1,6 @@
 #### Help
 
- * [Disclaimer](disclaimer.md)
- * [BitShares](introduction/bitshares.md)
+ * [Index](index.md)
  * [Wallet](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)
@@ -9,13 +8,4 @@
  * [Accounts](accounts/general.md)
  * [Proposed Transactions](accounts/proposed.md)
  * [Permissions](accounts/permissions.md)
- * [Memberships](accounts/membership.md)
- * [Market Pegged Assets](assets/mpa.md)
- * [User Issued Assets](assets/uia.md)
- * [Privatized BitAssets](assets/privbitassets.md)
- * [Decentralized Exchange](dex/introduction.md)
- * [Trading](dex/trading.md)
- * [Short Selling BitAssets](dex/shorting.md)
- * [Gateways](gateways/introduction.md)
-    * [Xbts](gateways/xbtsx.md)
-    * [ioxbank](gateways/ioxbank.md)
+ <!-- * [Memberships](accounts/membership.md) -->

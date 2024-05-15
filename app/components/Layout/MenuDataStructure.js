@@ -1,4 +1,5 @@
 import MenuItemType from "./MenuItemType";
+import {showAssetsAccounts} from "../../branding";
 
 class MenuDataStructure {
     /*
@@ -17,7 +18,9 @@ class MenuDataStructure {
             showAccountLinks,
             tradeUrl,
             enableDepositWithdraw,
+
             passwordLogin,
+
             currentAccount,
             createAccountLink
         }
@@ -38,7 +41,9 @@ class MenuDataStructure {
                 item.inHeaderBehavior = MenuItemType.Always;
             }
             if (item.inDropdownBehavior === MenuItemType.WhenAccount) {
-                item.hidden = !state.currentAccount;
+                if (!item.hasOwnProperty("hidden")) {
+                    item.hidden = !state.currentAccount;
+                }
                 item.inDropdownBehavior = MenuItemType.Always;
             }
             if (item.inDropdownBehavior === MenuItemType.WhenUnlocked) {
@@ -66,12 +71,7 @@ class MenuDataStructure {
     static getHeader() {
         const allItems = MenuDataStructure.getAllEntries();
 
-        return [
-            allItems.dashboard,
-            allItems.market,
-            allItems.lending,
-            allItems.explorer
-        ];
+        return [allItems.dashboard, allItems.market, allItems.explorer];
     }
 
     static getDropdownMenu() {
@@ -104,7 +104,6 @@ class MenuDataStructure {
                 allItems.account_pools,
                 allItems.account_signedmessages,
                 allItems.account_stats,
-                allItems.account_vesting,
                 allItems.account_whitelist,
                 allItems.account_permissions
             ];
@@ -115,39 +114,42 @@ class MenuDataStructure {
         return [
             allItems.login,
             allItems.create_account,
-            allItems.follow,
-            allItems.divider,
             allItems.dashboard,
             allItems.market,
-            allItems.lending,
-            allItems.poolmart,
             allItems.explorer,
             allItems.divider,
             allItems.transfer,
             allItems.deposit,
+            allItems.poolmart,
             allItems.withdraw,
+            //allItems.token_distribution,
+            allItems.settings,
+            allItems.settings_mobile,
+            allItems.help,
             allItems.account_voting,
-            allItems.spotlight,
+            allItems.account_vesting,
+            allItems.account_permissions,
+            allItems.account_assets,
+            allItems.account_stats,
             allItems.insight,
-            allItems.divider,
+            //allItems.accounts,
+            allItems.terms_conditions_page_1,
+            allItems.terms_conditions_page_2,
+            allItems.privacy_policy
+            // allItems.accounts
             // allItems.account_voting,
-            // allItems.account_assets,
             // allItems.account_signedmessages,
             // allItems.account_stats,
             // allItems.account_vesting,
             // allItems.account_vesting_2,
             // allItems.account_whitelist,
-            // allItems.account_permissions,
             // allItems.divider,
-            allItems.settings,
-            allItems.settings_mobile,
-            allItems.accounts,
             // allItems.news,
-            allItems.borrow,
-            allItems.barter,
-            allItems.direct_debit,
-            allItems.prediction,
-            allItems.htlc
+            // allItems.borrow,
+            // allItems.barter,
+            // allItems.direct_debit,
+            // allItems.prediction,
+            // allItems.htlc
         ];
     }
 
@@ -163,6 +165,23 @@ class MenuDataStructure {
             }),
             divider: state => ({
                 inDropdownBehavior: MenuItemType.Divider
+            }),
+            account: state => ({
+                includePattern: ["/"],
+                excludePattern: [
+                    "/assets",
+                    "/voting",
+                    "/signedmessages",
+                    "/member-stats",
+                    "/vesting",
+                    "/whitelist",
+                    "/permissions"
+                ],
+                target: `/account/${state.currentAccount}`,
+                icon: "user",
+                text: "header.account",
+                inHeaderBehavior: MenuItemType.WhenAccount,
+                inDropdownBehavior: MenuItemType.Never
             }),
             create_account: state => ({
                 includePattern: state.passwordLogin
@@ -194,18 +213,7 @@ class MenuDataStructure {
                 icon: "dashboard",
                 text: "header.dashboard",
                 inHeaderBehavior: MenuItemType.WhenAccount,
-                inDropdownBehavior: MenuItemType.WhenAccount
-            }),
-            follow: state => ({
-                target: state.clickHandlers.followUnfollow,
-                icon: {
-                    name: state.isContact ? "minus-circle" : "plus-circle",
-                    title: state.isContact
-                        ? "icons.minus_circle.remove_contact"
-                        : "icons.plus_circle.add_contact"
-                },
-                text: state.isContact ? "account.unfollow" : "account.follow",
-                inDropdownBehavior: MenuItemType.WhenNotMyAccount
+                inDropdownBehavior: MenuItemType.Never
             }),
             market: state => ({
                 includePattern: "/market/",
@@ -215,25 +223,17 @@ class MenuDataStructure {
                     title: "icons.trade.exchange"
                 },
                 text: "header.exchange",
-                inHeaderBehavior: MenuItemType.Always,
-                inDropdownBehavior: MenuItemType.WhenNotInHeader
+                inHeaderBehavior: MenuItemType.Never,
+                inDropdownBehavior: MenuItemType.Never
             }),
-            poolmart: state => ({
+          poolmart: state => ({
                 includePattern: "/pools",
                 //target: state.poolmartUrl,
                 target: "/pools",
                 icon: {name: "poolmart", title: "icons.poolmart.title"},
                 text: "header.poolmart",
                 inHeaderBehavior: MenuItemType.Always,
-                inDropdownBehavior: MenuItemType.Always
-            }),
-            lending: state => ({
-                includePattern: "/credit-offer",
-                target: "/credit-offer",
-                icon: "deployment-unit",
-                text: "header.p2p_lending",
-                inHeaderBehavior: MenuItemType.Always,
-                inDropdownBehavior: MenuItemType.WhenNotInHeader
+                inDropdownBehavior: MenuItemType.WhenAccount
             }),
             explorer: state => ({
                 includePattern: "/explorer",
@@ -243,40 +243,44 @@ class MenuDataStructure {
                     size: "2x"
                 },
                 text: "header.explorer",
-                inHeaderBehavior: MenuItemType.Always,
-                inDropdownBehavior: MenuItemType.WhenNotInHeader
+                inHeaderBehavior: MenuItemType.Never,
+                inDropdownBehavior: MenuItemType.Never
             }),
             transfer: state => ({
                 target: state.clickHandlers.showSend,
                 icon: "transfer",
                 text: "header.payments",
-                inDropdownBehavior: MenuItemType.WhenAccount
+                inDropdownBehavior: MenuItemType.WhenAccount,
+                inHeaderBehavior: MenuItemType.Always,
             }),
-            deposit: state => ({
-                target: state.clickHandlers.showDeposit,
+            deposit: () => ({
+                target: "/deposit/new",
                 icon: {
                     name: "deposit",
                     title: "icons.deposit.deposit"
                 },
-                text: "modal.deposit.submit",
                 submenu: {
-                    target: "/deposit-withdraw",
-                    text: "header.deposit_legacy",
-                    disabled: !state.enableDepositWithdraw
+                    target: "/deposit",
+                    text: "deposit.sub_title"
                 },
-                disabled: !state.enableDepositWithdraw,
-                inDropdownBehavior: MenuItemType.WhenAccount
+                text: "deposit.title",
+                inDropdownBehavior: MenuItemType.Never,
+                inHeaderBehavior: MenuItemType.Always,
             }),
-            withdraw: state => ({
-                target: state.clickHandlers.showWithdraw,
+            withdraw: () => ({
+                target: "/withdraw/new",
                 icon: "withdraw",
-                text: "modal.withdraw.submit",
-                submenu: {
-                    target: "/deposit-withdraw",
-                    text: "header.withdraw_legacy",
-                    disabled: !state.enableDepositWithdraw
-                },
-                disabled: !state.enableDepositWithdraw,
+                text: "withdraw.title",
+                inDropdownBehavior: MenuItemType.Never,
+                inHeaderBehavior: MenuItemType.Always,
+            }),
+            account_pools: state => ({
+                includePattern: "/pools",
+                excludePattern: "explorer",
+                target: `/account/${state.currentAccount}/pools`,
+                icon: "pools",
+                text: "account.liquidity_pools.title",
+                inHeaderBehavior: MenuItemType.Dynamic,
                 inDropdownBehavior: MenuItemType.WhenAccount
             }),
             deposit_withdraw: state => ({
@@ -288,6 +292,12 @@ class MenuDataStructure {
                 text: "header.deposit-withdraw",
                 inHeaderBehavior: MenuItemType.Dynamic,
                 inDropdownBehavior: MenuItemType.Never
+            }),
+            token_distribution: state => ({
+                target: "/token-distribution/new",
+                icon: "barter",
+                text: "token_distribution.title",
+                inDropdownBehavior: MenuItemType.WhenAccount
             }),
             settings: state => ({
                 includePattern: "/settings",
@@ -388,15 +398,6 @@ class MenuDataStructure {
                 inHeaderBehavior: MenuItemType.Dynamic,
                 inDropdownBehavior: MenuItemType.WhenAccount
             }),
-            account_pools: state => ({
-                includePattern: "/pools",
-                excludePattern: "explorer",
-                target: `/account/${state.currentAccount}/pools`,
-                icon: "pools",
-                text: "account.liquidity_pools.title",
-                inHeaderBehavior: MenuItemType.Dynamic,
-                inDropdownBehavior: MenuItemType.WhenAccount
-            }),
             account_signedmessages: state => ({
                 includePattern: "/signedmessages",
                 target: `/account/${state.currentAccount}/signedmessages`,
@@ -415,7 +416,7 @@ class MenuDataStructure {
                     name: "text",
                     title: "icons.text.membership_stats"
                 },
-                text: "account.member.stats",
+                text: "account.member.info",
                 inHeaderBehavior: MenuItemType.Dynamic,
                 inDropdownBehavior: MenuItemType.WhenAccount
             }),
@@ -461,13 +462,14 @@ class MenuDataStructure {
             }),
             help: state => ({
                 includePattern: "/help",
+                target: "/help",
                 icon: {
                     name: "question-circle",
                     title: "icons.question_circle"
                 },
                 text: "header.help",
                 inHeaderBehavior: MenuItemType.Dynamic,
-                inDropdownBehavior: MenuItemType.Never
+                inDropdownBehavior: MenuItemType.Always
             }),
             borrow: state => ({
                 includePattern: "/borrow",
@@ -503,6 +505,46 @@ class MenuDataStructure {
                 text: "showcases.htlc.title_short",
                 inHeaderBehavior: MenuItemType.Dynamic,
                 inDropdownBehavior: MenuItemType.Never
+            }),
+            terms_conditions_page_1: state => ({
+                target: () => {
+                    window.open(
+                        "https://homepesa.com/terms-conditions-page-1/terms-%2526-conditions-page-1.html"
+                    );
+                },
+                icon: {
+                    name: "text",
+                    title: "icons.text"
+                },
+                text: "header.terms_conditions_page_1",
+                inHeaderBehavior: MenuItemType.Dynamic,
+                inDropdownBehavior: MenuItemType.Always
+            }),
+            terms_conditions_page_2: state => ({
+                target: () => {
+                    window.open(
+                        "https://homepesa.com/terms-conditions-page-1/terms-%252526-conditions-page-2.html"
+                    );
+                },
+                icon: {
+                    name: "text",
+                    title: "icons.text"
+                },
+                text: "header.terms_conditions_page_2",
+                inHeaderBehavior: MenuItemType.Dynamic,
+                inDropdownBehavior: MenuItemType.Always
+            }),
+            privacy_policy: state => ({
+                target: () => {
+                    window.open("https://homepesa.com/privacy-policy/privacy-notice.html");
+                },
+                icon: {
+                    name: "text",
+                    title: "icons.text"
+                },
+                text: "header.privacy_policy",
+                inHeaderBehavior: MenuItemType.Dynamic,
+                inDropdownBehavior: MenuItemType.Always
             })
         };
     }

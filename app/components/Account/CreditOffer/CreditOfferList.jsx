@@ -86,6 +86,20 @@ class CreditOfferList extends React.Component {
                 // render: (text) => `#${text.split(".")[2]}`,
             },
             {
+                title: counterpart.translate("credit_offer.status"),
+                dataIndex: "enabled",
+                render: item => {
+                    let cls = "label " + (item ? "success" : "info");
+                    return (
+                        <span className={cls}>
+                            {item
+                                ? counterpart.translate("credit_offer.active")
+                                : counterpart.translate("credit_offer.closed")}
+                        </span>
+                    );
+                }
+            },
+            {
                 title: counterpart.translate("credit_offer.asset"),
                 dataIndex: "asset_type",
                 render: text => <LinkToAssetById asset={text} />
@@ -165,20 +179,6 @@ class CreditOfferList extends React.Component {
                             <LinkToAssetById asset={v[0]} />
                         </div>
                     ));
-                }
-            },
-            {
-                title: counterpart.translate("credit_offer.status"),
-                dataIndex: "enabled",
-                render: item => {
-                    let cls = "label " + (item ? "success" : "info");
-                    return (
-                        <span className={cls}>
-                            {item
-                                ? counterpart.translate("credit_offer.active")
-                                : counterpart.translate("credit_offer.closed")}
-                        </span>
-                    );
                 }
             }
         ];

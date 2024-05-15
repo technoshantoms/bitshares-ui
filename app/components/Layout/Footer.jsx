@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 import AltContainer from "alt-container";
 import Translate from "react-translate-component";
 import BindToChainState from "../Utility/BindToChainState";
@@ -23,6 +22,8 @@ import {ChainStore} from "bitsharesjs";
 import ifvisible from "ifvisible";
 import {getWalletName} from "branding";
 import {Tooltip} from "bitshares-ui-style-guide";
+import {Link} from "react-router-dom";
+import CookiesPopup from "./CookiesPopup/CookiesPopup";
 
 class Footer extends React.Component {
     static propTypes = {
@@ -83,7 +84,7 @@ class Footer extends React.Component {
     componentDidMount() {
         this.checkNewVersionAvailable.call(this);
 
-        this.downloadLink = "https://github.com/bitshares/bitshares-ui/releases/latest";
+        this.downloadLink = "https://github.com/ui/releases";
 
         let ensure = this._ensureConnectivity.bind(this);
         ifvisible.on("wakeup", function() {
@@ -112,7 +113,7 @@ class Footer extends React.Component {
     checkNewVersionAvailable() {
         if (__ELECTRON__) {
             fetch(
-                "https://api.github.com/repos/bitshares/bitshares-ui/releases/latest"
+                "https://api.github.com/repos"
             )
                 .then(res => {
                     return res.json();
@@ -447,6 +448,7 @@ class Footer extends React.Component {
                         )}
                     </div>
                 </ChoiceModal>
+                <CookiesPopup></CookiesPopup>
                 <div className="show-for-medium grid-block shrink footer">
                     <div className="align-justify grid-block">
                         <div className="grid-block">
@@ -493,7 +495,7 @@ class Footer extends React.Component {
                                     />
                                     {__GIT_BRANCH__ === "staging" ? (
                                         <a
-                                            href={`https://github.com/bitshares/bitshares-ui/commit/${version.trim()}`}
+                                            href={`https://github.com/ui/commit/${version.trim()}`}
                                             className="version external-link"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -506,12 +508,7 @@ class Footer extends React.Component {
                                         </span>
                                     )}
                                 </span>
-                                <span>
-                                    {" "}
-                                    -{" "}
-                                    <Link to="/help/disclaimer">Disclaimer</Link>
-                                    {" "}
-                                </span>
+
                                 {state.newVersion && (
                                     <Translate
                                         content="footer.update_available"
@@ -524,6 +521,8 @@ class Footer extends React.Component {
                                     />
                                 )}
                             </div>
+                           
+            
                         </div>
                         {!!routerTransitioner &&
                             routerTransitioner.isBackgroundPingingInProgress() && (
@@ -548,6 +547,59 @@ class Footer extends React.Component {
                                     &nbsp; &nbsp;
                                 </div>
                             )}
+
+                        <div
+                            className=""
+                            style={{
+                                justifyContent: "flex-end"
+                            }}
+                        >
+                            <div
+                                style={{
+                                    display: "flex"
+                                }}
+                            >
+                                <a
+                                    style={{
+                                        padding: "0 0.5rem",
+                                        borderLeft:
+                                            "1px solid rgba(128, 128, 128, 0.45)",
+                                        lineHeight: "2rem",
+                                        fontSize: "1em"
+                                    }}
+                                    href="https://play.google.com/store/apps/details?id=org.homepesa.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        style={{
+                                            height: "22px"
+                                        }}
+                                        src={"app/assets/images/google-play.png"}
+                                    />
+                                </a>
+                                <a
+                                    style={{
+                                        padding: "0 0.5rem",
+                                        borderLeft:
+                                            "1px solid rgba(128, 128, 128, 0.45)",
+                                        lineHeight: "2rem",
+                                        fontSize: "1em"
+                                    }}
+                                    href="https://cbk.co.ke/exchanges/homepesa.sacco/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        style={{
+                                            height: "22px"
+                                        }}
+                                        src={"app/assets/images/appstore.png"}
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
                         {synced ? null : (
                             <div className="grid-block shrink txtlabel cancel">
                                 <Translate content="footer.nosync" />
@@ -662,40 +714,7 @@ class Footer extends React.Component {
                                     </div>
                                 </Tooltip>
 
-                                <div className="grid-block">
-                                    <Tooltip
-                                        title={counterpart.translate(
-                                            "tooltip.debug_report"
-                                        )}
-                                        placement="topRight"
-                                        mouseEnterDelay={0.5}
-                                    >
-                                        <div
-                                            className="introjs-launcher"
-                                            onClick={e => {
-                                                this._showReportModal(e);
-                                            }}
-                                        >
-                                            <Translate content="modal.report.button" />
-                                        </div>
-                                    </Tooltip>
-                                    <Tooltip
-                                        title={counterpart.translate(
-                                            "tooltip.self_help"
-                                        )}
-                                        placement="topRight"
-                                        mouseEnterDelay={0.5}
-                                    >
-                                        <div
-                                            className="introjs-launcher"
-                                            onClick={() => {
-                                                this.launchIntroJS();
-                                            }}
-                                        >
-                                            <Translate content="global.help" />
-                                        </div>
-                                    </Tooltip>
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className="grid-block shrink">

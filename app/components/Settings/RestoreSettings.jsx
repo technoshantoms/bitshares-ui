@@ -95,7 +95,7 @@ export default class RestoreSettings extends React.Component {
                 );
                 break;
 
-            default:
+            case "key":
                 content = <ImportKeys privateKey={restoreType === 1} />;
                 break;
         }

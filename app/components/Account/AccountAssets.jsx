@@ -217,7 +217,7 @@ class AccountAssets extends React.Component {
                                     <Translate content="account.user_issued_assets.mpa" />
                                 )
                             ) : (
-                                "User Issued Asset"
+                                "Global Assets"
                             )}
                         </td>
                         <td style={{textAlign: "right"}}>

@@ -28,17 +28,17 @@ class Settings extends React.Component {
         if (tabIndex >= 0) activeSetting = tabIndex;
 
         let general = [
-            "locale",
+            "themes",
             "unit",
             "fee_asset",
             "filteredServiceProviders",
-            "browser_notifications",
-            "showSettles",
+            //"browser_notifications",
+            //"showSettles",
             "walletLockTimeout",
-            "themes",
             "showAssetPercent",
             "viewOnlyMode",
             "showProposedTx"
+            //"locale"
         ];
         // disable that the user can change login method if only one is allowed
         if (getAllowedLogins().length > 1) general.push("passwordLogin");
@@ -168,12 +168,12 @@ class Settings extends React.Component {
         // use different change handler because checkbox doesn't work
         // normal with e.preventDefault()
 
-        let updatedValue = set(
+     /*   let updatedValue = set(
             this.props.settings.get("browser_notifications"),
             path,
             value
         );
-
+*/
         SettingsActions.changeSetting({
             setting: "browser_notifications",
             value: updatedValue
@@ -212,7 +212,7 @@ class Settings extends React.Component {
         }
 
         switch (setting) {
-            case "locale":
+         /*   case "locale":
                 let myLocale = counterpart.getLocale();
                 if (e.target.value !== myLocale) {
                     IntlActions.switchLocale(e.target.value);
@@ -222,6 +222,7 @@ class Settings extends React.Component {
                     });
                 }
                 break;
+                */
 
             case "themes":
                 SettingsActions.changeSetting({
@@ -260,7 +261,7 @@ class Settings extends React.Component {
                 break;
 
             case "showProposedTx":
-            case "showSettles":
+            //case "showSettles":
             case "showAssetPercent":
             case "passwordLogin":
             case "viewOnlyMode":

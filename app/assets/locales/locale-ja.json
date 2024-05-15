@@ -70,7 +70,7 @@
         "intro_text_2": "BitSharesは<b>DEX</b>として分散化されており、BitSharesのコアトークンであるBTSと、bitUSD、bitCNY、bitBTC、bitGoldなどのトラストレスで価格安定性のあるアセット間のトレードを可能にします。これらの資産はすべてカウンターパーティリスク<b>ゼロ</b>で取引することができるため、あなた自身が資金を完全にコントロールすることができます。",
         "intro_text_3": "<b>DEX</b>では、ユーザー発行型アセット（UIA）の作成も可能です。ユーザー発行型アセットは、プラットフォーム上の他のユーザー発行型アセット、及びトラストレスアセット間のトレードが可能です。 DEX上でよく知られているアセット発行者である、<b>OpenLedger</b>、はBTC、ETH、STEEM、DASH、LTC、DOGE、その他多数のアセットをホスティングしています。",
         "intro_text_4": "これにより、仮想通貨トレーダーは使い慣れた取引インタフェースを通して、伝統的なトレーディングスタイルと分散型のトレーディングスタイルのユニークな融合を体験することができます。",
-        "intro_text_title": "BitShares分散型取引所へようこそ",
+        "intro_text_title": "HomePesa分散型取引所へようこそ",
         "liquidity_pools": {
             "alert_asset_a": "ID of ASSET A should be greater than ID of ASSET B",
             "alert_asset_b": "ID of ASSET B should be smaller than ID of ASSET A",
@@ -511,7 +511,7 @@
         "ws_status": "フルノード接続状態"
     },
     "assets": {
-        "BTS": "BTS is the core token of the BitShares Blockchain"
+        "BTS": "BTS is the core token of the HomePesa Blockchain"
     },
     "boolean": {
         "false": "False",
@@ -589,14 +589,12 @@
         "credit_offers": "Credit Offers",
         "credit_right_account": "Account",
         "credit_rights": "Credit Rights",
-        "current_available_balance": "Current Available Balance",
         "current_balance": "Available",
         "debt": "Debt",
         "edit": "Modify credit offer",
         "estimated_fee": "Estimated fee",
         "fee_rate": "Rate",
         "info_borrow_err": "Can't borrow from oneself ！",
-        "invalid_min_bigger_amount": "Min cannot be bigger than amount",
         "list_repay_period": {
             "period_-1": "No limit",
             "period_0": "12 Hours",
@@ -604,23 +602,15 @@
             "period_2": "3 Days",
             "period_3": "7 Days",
             "period_4": "30 Days",
-            "period_5": "90 days",
-            "period_6": "365 days",
-            "period_7": "730 days",
-            "period_8": "1825 days"
+            "period_5": "90 days"
         },
         "loan_amount": "Maximum",
         "min_borrow": "Minimum",
-        "min_loan_bigger_than_balance": "Min to loan > Total credit offer balance (%(min)s > %(balance)s)",
         "mortgage_assets": "Collateral",
         "my_debt": "My debt",
-        "number_is_to_big": "You have used a big number which caused overflow",
         "operate": "Action",
         "operate_delete": "Delete",
         "operate_edit": "Modify",
-        "override_authority_warning": "Be careful, this asset has an `override_authority` setting, so the owner of the asset could transfer it back to himself with no agreement",
-        "override_authority_warning_p1": "%(symbol)s is controlled by its issuer",
-        "override_authority_warning_p2": "Do your own due diligence when using ",
         "pawn_amount": "Amount",
         "plh_input_asset_name": "Enter asset",
         "plh_select_validity_period": "Choose an expiration date",
@@ -634,7 +624,6 @@
         "title_add_pawn": "Add collateral",
         "title_add_whitelist": "Add white account",
         "total_amount": "Total",
-        "total_to_repay": "Repay Total",
         "validity_period": "Expiration",
         "whitelist_account": "Account"
     },
@@ -943,7 +932,6 @@
             "fee_pool": {
                 "accumulated_collateral_fees": "Accumulated collateral fees",
                 "claim_balance": "Claim fee pool balance",
-                "claim_collateral_fees": "Claim fees",
                 "claim_fees": "手数料を請求",
                 "claim_pool_text": "The asset owner may withdraw funds from the fee pool using this form:",
                 "claim_text": "アセット発行者はここに蓄積された手数料を請求することができます。",
@@ -1185,7 +1173,7 @@
     },
     "external_service_provider": {
         "bridge": {
-            "description": "Bridges are external service providers that allow you to swap assets in and out of the BitShares Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of BTS or another Gateways UIA on the BitShares Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Bridges are external service providers that allow you to swap assets in and out of the HomePesa Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of BTS or another Gateways UIA on the HomePesa Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "short": "Bridge",
             "what_is": "What is a Bridge?"
         },
@@ -1193,7 +1181,7 @@
         "disabled_asset_2": "For more information visit Settings -> Entry External Service Providers. For any issues or questions please contact the gateway operator directly.",
         "expect_more": "If you expect to see more deposit and withdraw options for your assets, please check the External Service Providers in Settings > General.",
         "gateway": {
-            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the BitShares Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the BitShares Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the BitShares Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the HomePesa Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the HomePesa Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the HomePesa Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "prefix": "Prefix",
             "short": "Gateway",
             "what_is": "What is a Gateway?"
@@ -1205,7 +1193,7 @@
             "landing": "Landing Page",
             "name": "Name",
             "not_now": "Not now",
-            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the BitShares UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
+            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the HomePesa UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
             "title": "Choose your preferred Service Providers",
             "type": "Type",
             "use_none": "Use none",
@@ -1213,12 +1201,12 @@
             "wallet": "Wallet"
         },
         "welcome": {
-            "explanation_dex": "BitShares offers a native decentralized exchange, the BitShares DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
+            "explanation_dex": "HomePesa offers a native decentralized exchange, the HomePesa DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
             "explanation_later": "If you want to adjust this later on, you can also choose the external service providers in the Settings.",
-            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the BitShares Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the BitShares DEX by providing you their own IOU ('I owe you') of it.",
-            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the BitShares UI. To do so, click 'Choose Services'. If you want to keep using the BitShares UI just like before, lick 'Not now'.",
-            "first_line": "today, we want to give you some insight on the BitShares Blockchain and services around it.",
-            "hello": "Dear BitShares' User"
+            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the HomePesa Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the HomePesa DEX by providing you their own IOU ('I owe you') of it.",
+            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the HomePesa UI. To do so, click 'Choose Services'. If you want to keep using the HomePesa UI just like before, lick 'Not now'.",
+            "first_line": "today, we want to give you some insight on the HomePesa Blockchain and services around it.",
+            "hello": "Dear HomePesa' User"
         }
     },
     "fees": {
@@ -1262,9 +1250,8 @@
             "bitcny": "bitCNY はMagic Walletが提供するゲートウェイサービスによって実際の元と1：1で入出金できます。詳細はこちらを見てください https://www.magicw.net/",
             "bridge": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、CryptoBridgeによって提供されるゲートウェイサービスによって入出金が可能です。",
             "gdex": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、Gdexによって提供されるゲートウェイサービスによって入出金が可能です。",
-            "iob": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
+            "ioxbank": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
             "open": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、OpenLedgerによって提供されるゲートウェイサービスによって入出金が可能です。",
-            "pirate": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、PirateDEXによって提供されるゲートウェイサービスによって入出金が可能です。",
             "rudex": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、Rudexによって提供されるゲートウェイサービスによって入出金が可能です。",
             "trade": "%(asset)sアセットは実際の%(backed)sと1：1に対応し、Blocktradesによって提供されるゲートウェイサービスによって入出金が可能です。",
             "win": "",
@@ -1332,7 +1319,7 @@
         "info": "情報",
         "intermediate": "中間アカウント",
         "inventory": "一覧表",
-        "iob": {
+        "ioxbank": {
             "coming_soon": "Coming soon",
             "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
             "min_amount_error": "Please enter number >= minimum",
@@ -1353,13 +1340,6 @@
         "min_deposit_warning_asset": "IMPORTANT: Send only %(coin)s to this deposit address on the blockchain native to %(coin)s. Sending less than %(minDeposit)s %(coin)s or any other currency to this address may result in the loss of your deposit.",
         "over_limit": "制限に達しました",
         "phase_out_warning": "We recommend using the new {deposit_modal_link} and {withdraw_modal_link} modals as this page will be phased out",
-        "piratecash": {
-            "coming_soon": "近日公開",
-            "min_amount": "最低数量: %(minAmount)s %(symbol)s",
-            "min_amount_error": "数字を入力してください >= minimum",
-            "support_block": "サポートについては、PirateCashまでご連絡ください。:",
-            "under_construction": "工事中"
-        },
         "please_generate_address": "新しいアドレスを取得",
         "purchase": "%(asset)sを買う",
         "purchase_1": "外部ウォレットの%(inputAsset)sで%(outputAsset)sを素早く簡単に買います。このサービスは<a href='https://blocktrades.us/' target='blank' rel='noopener noreferrer'>Blocktrades</a>によって提供されます。",
@@ -1461,7 +1441,7 @@
         "poolmart": "Liquidity Pools",
         "settings": "設定",
         "showcases": "Spotlight",
-        "title": "BitShares UI",
+        "title": "HomePesa UI",
         "unlock": "ログイン (ウォレットをアンロック)",
         "unlock_password": "パスワードでログイン",
         "unlock_short": "ログイン",
@@ -1521,7 +1501,7 @@
             "borrow": "Borrow",
             "buy": "Buy"
         },
-        "download": "Download new version of BitShares UI",
+        "download": "Download new version of HomePesa UI",
         "excel": "Download .csv file",
         "eye": "Hide Node",
         "eye-striked": "Show Node",
@@ -1637,7 +1617,7 @@
             "quantity": "Quantity",
             "recipient_account": "Recipient Account",
             "recipient_name": "Recipient Name",
-            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a BitShares account name.",
+            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a HomePesa account name.",
             "submit": "Submit",
             "title": "Request"
         },
@@ -1699,7 +1679,7 @@
             "confirm": "CONFIRM",
             "create_committee": "Become a committee member",
             "from": "From",
-            "text": "After being voted in as active committee you can help set policies and parameters for the BitShares blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of BitShares and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
+            "text": "After being voted in as active committee you can help set policies and parameters for the HomePesa blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of HomePesa and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
             "url": "URL",
             "web_example": "Enter link to your committee proposal post"
         },
@@ -1805,7 +1785,7 @@
             "address_not_valid": "無効なアドレス",
             "amount": "出金数量",
             "available": "利用可能: ",
-            "bitshares_account": "Send to Bitshares Account",
+            "bitshares_account": "Send to HomePesa Account",
             "cancel": "キャンセル",
             "cannot_cover": "この出金をするのに十分な資金がありません",
             "estimated_value": "推定価格",
@@ -1947,7 +1927,6 @@
         },
         "transfer": "{from}は{amount}を{to}に送りました",
         "transfer_account": "{account}の所有権を{to}に移転しました",
-        "unknown_operation": "不明な操作",
         "unlisted_by": "{lister}は{listee}をリストから外しました",
         "update_account": "{account}はアカウント情報を更新しました",
         "vesting_balance_withdraw": "{account}は{amount}の権利確定残高を引き出しました",
@@ -2072,7 +2051,7 @@
             "add_prediction": "A prediction is reflected as a limit order on the market of the prediction market asset with its collateral. This lets you create a buy order (you agree with the prediction), or a sell order with previous borrowing of the prediction market asset (you disagree with the prediction). You can also oppose one of the existing predictions listed below, which correlates to matching one of the existing limit orders on the blockchain.",
             "create_prediction_market_asset": "A prediction market is a special kind of SmartCoin. This lets you create such a prediction market asset with inputs tailored for this purpose.",
             "hide_invalid_asset": "Per default the table below only shows prediction market assets that meet common standards required for a consistent user experience (prediction and resolution date are given, and reasonable market fee). Uncheck this to show all assets that exist on the blockchain, and make sure you know what you are doing.",
-            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the BitShares community.",
+            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the HomePesa community.",
             "oppose_is_incorrect": "You are opposing someone that thinks the prediction is incorrect. That means, you think the prediction will prove true. On the blockchain that reflects as buying and hodling the prediction market asset.",
             "oppose_proves_true": "You are opposing someone that thinks the prediction proves true. That means, you think the prediction will be incorrect. On the blockchain that reflects as borrowing and selling the prediction market asset.",
             "what_is_a_prediction_market_asset": "A prediction market asset is a special kind of asset that allows you to agree or disagree with the prediction statement of the asset and put collateral behind your opinion. It can be created by any user, and if you are participating you need to trust the asset owner to properly reflects the real world outcome on the blockchain.",
@@ -2181,7 +2160,7 @@
         "walletDescription": "A bin-file will be automatically created. Please download it and keep in a safe place. You’ll need to upload this file to login to your account in the future.",
         "walletLoginByValue": "Bin-file + Password",
         "walletModelTitle": "By bin-file",
-        "walletNote": "Please keep in mind, that BitShares doesn't store users passwords and couldn't recover users accounts after password loss.",
+        "walletNote": "Please keep in mind, that HomePesa doesn't store users passwords and couldn't recover users accounts after password loss.",
         "whyBinFile": "Why do I need a .bin file?"
     },
     "scaled_orders": {
@@ -2375,7 +2354,7 @@
         "borrow": {
             "borrow_tooltip": "You can also find this feature in your Dashboard under the tab Margin Positions, or by clicking  Borrow in the Exchange",
             "choose": "Choose the SmartCoin you want to create a position for",
-            "description": "Borrow a BitAsset from the BitShares Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
+            "description": "Borrow a BitAsset from the HomePesa Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
             "do_it": "Let's do it",
             "get_started": "Get started",
             "navigate_with_keys": "The mechanism of the SmartCoin generation will be explained in the following steps. You can also use arrow keys to navigate",
@@ -2389,7 +2368,7 @@
                 "title_within": "What are the benefits?"
             },
             "steps_concept": {
-                "text": "A Collateralized Debt Position enables every user of the BitShares Blockchain to generate SmartCoins (MPA) by providing collateral. The collateral is locked up until you pay back the SmartCoins you have generated. You are effectively borrowing the SmartCoin from the BitShares Blockchain.",
+                "text": "A Collateralized Debt Position enables every user of the HomePesa Blockchain to generate SmartCoins (MPA) by providing collateral. The collateral is locked up until you pay back the SmartCoins you have generated. You are effectively borrowing the SmartCoin from the HomePesa Blockchain.",
                 "text_legend": "Example bitUSD: Provide BTS as collateral to borrow bitUSD",
                 "title": "Concept",
                 "title_within": "What is a Collateralized Debt Position?"
@@ -2400,7 +2379,7 @@
                 "title_within": ""
             },
             "steps_introduction": {
-                "text": "Use this native dApp from the BitShares Blockchain to manage depositing collateral and the generation of SmartCoins.",
+                "text": "Use this native dApp from the HomePesa Blockchain to manage depositing collateral and the generation of SmartCoins.",
                 "title_within": "This is the place to generate SmartCoins (Market Pegged Assets, MPAs)"
             },
             "steps_risks": {
@@ -2510,7 +2489,7 @@
             "title": "Timed transfer"
         },
         "voting": {
-            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the BitShares Blockchain.",
+            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the HomePesa Blockchain.",
             "title": "Voting"
         }
     },
@@ -2534,7 +2513,6 @@
         "copy_tip": "テキストをコピーするにはここをクリックしてください。",
         "cr_danger": "現在、このポジションにはマージンコールがかかっています。担保を追加して担保比率を%(mr)s以上にするか、ポジションをクローズすることを検討してください。",
         "cr_warning": "このポジションは担保レベルが低く、担保比率が%(mr)sを下回った場合はマージンコールがかかります。担保を追加するかポジションをクローズすることを検討してください。",
-        "create_lock_periods": "Lock Periods",
         "debug_report": "Report an error or unexpected behavior you have found. Click to see the browser console log, create a screenshot and instructions how to best report your issue.",
         "deposit_tip": "入金を完了するには、%(asset)sウォレットに行き、このページに記載されているアドレスに転送してください。確認後、すぐに入金されます。メモが表示されている場合は、転送にこのメモを含めなければなりません。",
         "disconnected": "APIノードに接続していません。リロードするか、設定ページで新しいアクセスポイントを設定してください。",
@@ -2913,7 +2891,7 @@
     },
     "voting": {
         "create_ticket": "Lock 1 {asset}",
-        "description": "The BitShares blockchain allows the holders of its core token BTS to vote on block producers (witnesses), committee members (blockchain governance), worker proposals (reimbursement for tasks and strategic decisions through BSIPs/Polls).",
+        "description": "The HomePesa blockchain allows the holders of its core token BTS to vote on block producers (witnesses), committee members (blockchain governance), worker proposals (reimbursement for tasks and strategic decisions through BSIPs/Polls).",
         "increase_voting_power": "Create Lock",
         "ticket_explanation": "Obtain voting power by locking away the core token BTS.",
         "title": "Voting"
@@ -3021,11 +2999,11 @@
         "has_wallet": "最初のBitSharesアカウントを作成すると、自動的にBitSharesウォレットも作成され、ブラウザに格納されます。このウォレットはあなたのパスワードで暗号化されており、アカウントに付属する秘密キーを含んでいます。このウォレットのバックアップを作成することが大切です！",
         "import_20_notice1": "BTS 2.0+ バックアップを最初にインポートする",
         "import_20_notice2": "(お持ちの場合)",
-        "import_backup": "BitShares 2.0バックアップ (.bin ファイル) をインポートする",
+        "import_backup": "HomePesa 2.0バックアップ (.bin ファイル) をインポートする",
         "import_backup_choose": "以下のダイアログでバックアップファイルを選択してください。ファイルはどこにもアップロードされず、ブラウザから離れないため、この操作は安全です。",
         "import_balance": "残高をインポートする",
         "import_bts": "BTS 0.9.3c キーエクスポートをインポートする",
-        "import_bts1": "BitShares 0.9.3cからインポートする",
+        "import_bts1": "HomePesa 0.9.3cからインポートする",
         "import_key_success": "%(count)s のキーが正常にインポートされました。",
         "import_keys": "キーのインポート",
         "import_keys_tool": "キーのインポートツール",

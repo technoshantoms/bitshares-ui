@@ -7,20 +7,20 @@ $secondary-text-color: lighten($primary-text-color, 22%);
 $inactive-text-color: lighten($primary-text-color, 25%);
 $light-text-color: #3d3d3d;
 $dark-text-color: lighten($light-text-color, 12%);
-$link-text-color: #337ab7;
+$link-text-color: #2a0589;
 $error-text-color: #e3745b;
 
-$settings-select-bg: #e5e6e4;
+$settings-select-bg: #c1d0ed;
 $settings-select-color: #656565;
-$settings-api-node-border-color: #e6e6e6;
-$main-content-margin-block-bg-color: #f8f9f8;
-$bg-color: #fff;
-$panel-bg-color: #e5e6e4;
-$light-panel-bg-color: #fff;
+$settings-api-node-border-color: #c1d0ed;
+$main-content-margin-block-bg-color: #c1d0ed;
+$bg-color: #c1d0ed;
+$panel-bg-color: #c1d0ed;
+$light-panel-bg-color: #c1d0ed;
 $super-light-panel-bg-color: darken($light-panel-bg-color, 1%);
 $settings-menu-hover-bg: darken($light-panel-bg-color, 10%);
 $settings-menu-active-bg: darken($light-panel-bg-color, 10%);
-$button-bg-color: #2196f3;
+$button-bg-color: #c56f08;
 $secondary-button-bg-color: #999999;
 $input-background: darken($bg-color, 8%);
 
@@ -36,7 +36,7 @@ $ask-color: #ea340b;
 $call-color: #bbbf2b;
 $positive-color: #528c0a;
 $negative-color: rgba(225, 66, 74, 1);
-$row-accent-color: #ffffff;
+$row-accent-color: #c1d0ed;
 $header-color: #dcdcdc;
 
 // Account table view colors
@@ -46,7 +46,7 @@ $account-green: #488a00;
 $account-primarytext: $primary-text-color;
 $account-dimmed: #5d5d5d;
 $account-border: rgba(50, 49, 49, 0.1);
-$account-background: #e5e6e4;
+$account-background: #c1d0ed;
 $account-tabs-background: #d5d6d4;
 
 $pulsate-green-start: $account-green;
@@ -54,7 +54,7 @@ $pulsate-green-end: #70c117;
 $pulsate-red-start: $negative-color;
 $pulsate-red-end: #e87f84;
 
-$modal-bg-color: #dadada;
+$modal-bg-color: #c1d0ed;
 
 $positive-color-alternative: #22d173;
 $negative-color-alternative: #ff276d;
@@ -67,7 +67,7 @@ $mobile-input-bg: $input-background;
 $incognito-bg: #ea340b;
 
 $tab-content-background-color: lighten($account-header, 4%);
-$explorer-tab-content-background-color: #fff;
+$explorer-tab-content-background-color: #c1d0ed;
 
 // * * * Explorer
 
@@ -82,7 +82,7 @@ $explorer--witnesses--info-table-text-color: $dark-text-color;
 
 $explorer--assets--bg: $bg-color;
 
-// * * *
+// * * * c1d0ed dennis
 
 // * * * * Settings
 
@@ -93,10 +93,10 @@ $settings-label-color: rgba(0, 0, 0, 0.65);
 // color palette
 
 // branding colors
-$primary-color: #337ab7;
+$primary-color: #ac8e3e;
 
 // help colors
-$white: #fff;
+$white: #c1d0ed;
 $dark: rgba(0, 0, 0, 0.6);
 $dark-1: lighten($dark, 30%);
 $dark-2: lighten($dark, 60%);
@@ -137,7 +137,7 @@ $selector-text-color: $dark-1;
 
 $header-menu--active--icon-background: $white;
 $header-menu--active--box-shadow: 0 4px 9px 0 #00000015;
-$header-menu-background-color: #fff;
+$header-menu-background-color: #c1d0ed;
 $header-menu-item--hover--background-color: lighten($primary-color, 40%);
 
 .lightTheme {
@@ -233,10 +233,10 @@ $header-menu-item--hover--background-color: lighten($primary-color, 40%);
     }
 
     thead[class*="ant-table-thead"] th {
-        background-color: #2196f3bb !important;
+        background-color: #c5d1e8 !important;
     }
     div[class*="ant-table-footer"] {
-        background-color: #2196f3bb !important;
+        background-color: #c5d1e8 !important;
         color: white;
-    }
+    };
 }

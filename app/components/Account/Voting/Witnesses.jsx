@@ -18,13 +18,6 @@ export default class Witnesses extends Component {
     render() {
         const showWitnessModal = () => {
             this.setState({
-                showCreateWitnessModalUpdate: false,
-                showCreateWitnessModal: !this.state.showCreateWitnessModal
-            });
-        };
-        const showUpdateWitnessModal = () => {
-            this.setState({
-                showCreateWitnessModalUpdate: true,
                 showCreateWitnessModal: !this.state.showCreateWitnessModal
             });
         };
@@ -34,10 +27,7 @@ export default class Witnesses extends Component {
         const addWitnessHandler = this.props.addWitnessHandler;
         const removeWitnessHandler = this.props.removeWitnessHandler;
 
-        const {
-            showCreateWitnessModal,
-            showCreateWitnessModalUpdate
-        } = this.state;
+        const {showCreateWitnessModal} = this.state;
         const {
             all_witnesses,
             proxy_witnesses,
@@ -48,7 +38,6 @@ export default class Witnesses extends Component {
             filterSearch,
             account
         } = this.props;
-
         return (
             <div>
                 <div className={cnames("content-block")}>
@@ -56,12 +45,6 @@ export default class Witnesses extends Component {
                         <div style={{float: "right"}}>
                             <Button onClick={showWitnessModal}>
                                 <Translate content="account.votes.join_witnesses" />
-                            </Button>
-                            <Button
-                                style={{marginLeft: "8px"}}
-                                onClick={showUpdateWitnessModal}
-                            >
-                                <Translate content="account.votes.update_witness" />
                             </Button>
                         </div>
 
@@ -92,7 +75,6 @@ export default class Witnesses extends Component {
                 <JoinWitnessesModal
                     visible={showCreateWitnessModal}
                     account={account}
-                    updateOrCreate={showCreateWitnessModalUpdate}
                     hideModal={showWitnessModal}
                 />
             </div>

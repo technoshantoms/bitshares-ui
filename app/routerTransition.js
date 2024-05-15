@@ -741,6 +741,8 @@ class RouterTransitioner {
             return this._transitionDone(reject);
         }
 
+        //ChainConfig.setPrefix("TEST");
+
         return Promise.all([dbPromise, SettingsStore.init()])
             .then(() => {
                 let chainStoreResetPromise = chainChanged

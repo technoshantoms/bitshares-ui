@@ -67,10 +67,10 @@
         "in_open": "Bekleyen emirlerinizdeki %(asset)s miktarı: ",
         "in_open_value": "%(asset)s piyasasındaki bekleyen emirlerin büyüklüğü (anlık değere göre): ",
         "intro_text_1": "Merkezi Olmayan Platformunuz",
-        "intro_text_2": "<b>Bitshares</b>'de al-sat işlemleri herhangi bir aracı olmaksızın, doğrudan kullanıcıların kendi arasında gerçekleşir.",
+        "intro_text_2": "<b>HomePesa</b>'de al-sat işlemleri herhangi bir aracı olmaksızın, doğrudan kullanıcıların kendi arasında gerçekleşir.",
         "intro_text_3": "Platform üzerinde kullanıcılar kendi hesaplarının tam kontrolüne sahiptir - hiçbir aracı kurum işlemlerinize müdahale edemez!",
         "intro_text_4": "Platformda BTC, ETH, STEEM, DASH, LTC, DOGE gibi coin'lerle işlem yapabileceğiniz gibi aynı zamanda kendi coin'inizi oluşturabilir ve hemen ticaretine başlayabilirsiniz.",
-        "intro_text_title": "Bitshares'e Hoş Geldiniz",
+        "intro_text_title": "HomePesa'e Hoş Geldiniz",
         "liquidity_pools": {
             "alert_asset_a": "ID of ASSET A should be greater than ID of ASSET B",
             "alert_asset_b": "ID of ASSET B should be smaller than ID of ASSET A",
@@ -135,7 +135,7 @@
             "referal_fees": "Yönlendirme Ücreti Dağılımı",
             "referral_info": "As a lifetime member (LTM) you are eligable for a %(feesCashback)s% cashback on all your fees. You will also recieve cashback from markets with a referral reward. The referral reward is based on your own and your referred members market orders.",
             "referral_link": "Davet bağlantınız",
-            "referral_text": "Bu bağlantıyı BitShares'e davet etmek istediğiniz kişilere gönderin",
+            "referral_text": "Bu bağlantıyı HomePesa'e davet etmek istediğiniz kişilere gönderin",
             "referrals": "Tavsiye edenler",
             "referrer": "Tavsiye eden",
             "registrar": "Kaydı yapan",
@@ -463,7 +463,7 @@
             "workers_short": "Geliştiriciler"
         },
         "voting": "Seçimler",
-        "welcome": "Bitshares'e Hoşgeldiniz",
+        "welcome": "HomePesa'e Hoşgeldiniz",
         "whitelist": {
             "add": "İzin listesine ekle",
             "add_black": "Kara listeye ekle",
@@ -493,7 +493,7 @@
     },
     "app_init": {
         "browser": "Desteklenmeyen tarayıcı",
-        "browser_text": "Kullandığınız tarayıcı üzerinde testlerimiz devam etmektedir, bu yüzden BitShares Cüzdanını desteklemeyebilir. Cüzdanınızı yedekleyip Chrome Tarayıcısını kullanarak içeri aktarmanızı önemle tavsiye ederiz. Mesuliyet size aittir.",
+        "browser_text": "Kullandığınız tarayıcı üzerinde testlerimiz devam etmektedir, bu yüzden HomePesa Cüzdanını desteklemeyebilir. Cüzdanınızı yedekleyip Chrome Tarayıcısını kullanarak içeri aktarmanızı önemle tavsiye ederiz. Mesuliyet size aittir.",
         "check_latency": "Running latency checks...",
         "check_latency_feedback": "Running latency checks (%(pinged)s/%(totalToPing)s nodes) ...",
         "check_latency_feedback_country": "Latency check in best country (%(pinged)s/%(totalToPing)s nodes)",
@@ -511,7 +511,7 @@
         "ws_status": "Websocket Bağlantı Durumu"
     },
     "assets": {
-        "BTS": "BTS, BitShares Blockchain'in temel simgesidir"
+        "BTS": "KSH, HomePesa Blockchain'in temel simgesidir"
     },
     "boolean": {
         "false": "False",
@@ -589,14 +589,12 @@
         "credit_offers": "Credit Offers",
         "credit_right_account": "Account",
         "credit_rights": "Credit Rights",
-        "current_available_balance": "Current Available Balance",
         "current_balance": "Available",
         "debt": "Debt",
         "edit": "Modify credit offer",
         "estimated_fee": "Estimated fee",
         "fee_rate": "Rate",
         "info_borrow_err": "Can't borrow from oneself ！",
-        "invalid_min_bigger_amount": "Min cannot be bigger than amount",
         "list_repay_period": {
             "period_-1": "No limit",
             "period_0": "12 Hours",
@@ -604,23 +602,15 @@
             "period_2": "3 Days",
             "period_3": "7 Days",
             "period_4": "30 Days",
-            "period_5": "90 days",
-            "period_6": "365 days",
-            "period_7": "730 days",
-            "period_8": "1825 days"
+            "period_5": "90 days"
         },
         "loan_amount": "Maximum",
         "min_borrow": "Minimum",
-        "min_loan_bigger_than_balance": "Min to loan > Total credit offer balance (%(min)s > %(balance)s)",
         "mortgage_assets": "Collateral",
         "my_debt": "My debt",
-        "number_is_to_big": "You have used a big number which caused overflow",
         "operate": "Action",
         "operate_delete": "Delete",
         "operate_edit": "Modify",
-        "override_authority_warning": "Be careful, this asset has an `override_authority` setting, so the owner of the asset could transfer it back to himself with no agreement",
-        "override_authority_warning_p1": "%(symbol)s is controlled by its issuer",
-        "override_authority_warning_p2": "Do your own due diligence when using ",
         "pawn_amount": "Amount",
         "plh_input_asset_name": "Enter asset",
         "plh_select_validity_period": "Choose an expiration date",
@@ -634,7 +624,6 @@
         "title_add_pawn": "Add collateral",
         "title_add_whitelist": "Add white account",
         "total_amount": "Total",
-        "total_to_repay": "Repay Total",
         "validity_period": "Expiration",
         "whitelist_account": "Account"
     },
@@ -943,7 +932,6 @@
             "fee_pool": {
                 "accumulated_collateral_fees": "Accumulated collateral fees",
                 "claim_balance": "Talep ücreti havuz bakiyesi",
-                "claim_collateral_fees": "Claim fees",
                 "claim_fees": "Ücretleri talep et",
                 "claim_pool_text": "Varlık sahibi, bu formu kullanarak ücret havuzundan para çekebilir:",
                 "claim_text": "Dijital varlık sahibi burada biriken ücretleri talep edebilir.",
@@ -1185,7 +1173,7 @@
     },
     "external_service_provider": {
         "bridge": {
-            "description": "Köprüler, BitShares Blok Zinciri içindeki ve dışındaki varlıkları değiştirmenize izin veren harici hizmet sağlayıcılardır. Örneğin, Bitcoin Blockchain üzerindeki BTC'nizi, takas edecek ve size BitShares Blockchain'de (elbette bir ücret karşılığında) eşdeğer miktarda BTS veya başka bir Gateway UIA verecek olan bir Köprüye gönderebilirsiniz. Normalde, bir Köprü paranızı tutmaz, ancak size hedef varlığın uygun miktarını geri göndermeleri için güven gerekir. Harici bir hizmet sağlayıcı olduğu için, hizmetlerinden veya varlıklarından herhangi birini kullanarak Şartlar ve Koşullarını zımnen kabul edersiniz.",
+            "description": "Köprüler, HomePesa Blok Zinciri içindeki ve dışındaki varlıkları değiştirmenize izin veren harici hizmet sağlayıcılardır. Örneğin, Bitcoin Blockchain üzerindeki BTC'nizi, takas edecek ve size HomePesa Blockchain'de (elbette bir ücret karşılığında) eşdeğer miktarda BTS veya başka bir Gateway UIA verecek olan bir Köprüye gönderebilirsiniz. Normalde, bir Köprü paranızı tutmaz, ancak size hedef varlığın uygun miktarını geri göndermeleri için güven gerekir. Harici bir hizmet sağlayıcı olduğu için, hizmetlerinden veya varlıklarından herhangi birini kullanarak Şartlar ve Koşullarını zımnen kabul edersiniz.",
             "short": "Köprü",
             "what_is": "Köprü nedir?"
         },
@@ -1193,7 +1181,7 @@
         "disabled_asset_2": "Daha fazla bilgi için Ayarlar -> Harici Servis Sağlayıcıları Girin sayfasını ziyaret edin. Herhangi bir sorun veya soru için lütfen doğrudan ağ geçidi operatörüyle iletişime geçin.",
         "expect_more": "Varlıklarınız için daha fazla para yatırma ve çekme seçeneği görmeyi bekliyorsanız, lütfen Ayarlar > Genel'deki Harici Hizmet Sağlayıcıları kontrol edin.",
         "gateway": {
-            "description": "Ağ geçitleri, yerel olmayan BitShares Blockchain'e varlık yatırmanıza, takas etmenize ve çekmenize izin veren harici hizmet sağlayıcılardır. Örneğin, Bitcoin Blockchain üzerindeki BTC'nizi bir Ağ Geçidine gönderebilirsiniz; o da size BitShares Blockchain üzerinde bir UIA (kullanıcı tarafından verilen varlık) verecek ve onu tekrar geri çekebileceğiniz vaadiyle (elbette bir ücret karşılığında) . BitShares Blockchain üzerinde böyle bir UIA tutarken, Gateway fonlarınızın koruyucusu olur. Harici hizmet sağlayıcılar olduğu için, hizmetlerinden veya varlıklarından herhangi birini kullanarak Şartlar ve Koşullarını zımnen kabul edersiniz.",
+            "description": "Ağ geçitleri, yerel olmayan HomePesa Blockchain'e varlık yatırmanıza, takas etmenize ve çekmenize izin veren harici hizmet sağlayıcılardır. Örneğin, Bitcoin Blockchain üzerindeki BTC'nizi bir Ağ Geçidine gönderebilirsiniz; o da size HomePesa Blockchain üzerinde bir UIA (kullanıcı tarafından verilen varlık) verecek ve onu tekrar geri çekebileceğiniz vaadiyle (elbette bir ücret karşılığında) . HomePesa Blockchain üzerinde böyle bir UIA tutarken, Gateway fonlarınızın koruyucusu olur. Harici hizmet sağlayıcılar olduğu için, hizmetlerinden veya varlıklarından herhangi birini kullanarak Şartlar ve Koşullarını zımnen kabul edersiniz.",
             "prefix": "Prefix",
             "short": "Ağ Geçidi",
             "what_is": "Ağ Geçidi nedir?"
@@ -1205,7 +1193,7 @@
             "landing": "Açılış sayfası",
             "name": "İsim",
             "not_now": "Şimdi değil",
-            "table_description": "Aşağıdaki tablo, şu anda BitShares UI ile entegre olan tüm Ağ Geçitleri ve Köprüleri listelemektedir, bu herhangi bir onayı yansıtmamaktadır. Adı (alfabetik olarak sıralanmıştır), türü (Bridge veya Gateway ve Gateway varlık öneki ise, örneğin RUDEX.BTC), daha fazla bilgi içeren açılış sayfasına bir bağlantı ve Gateways cüzdanına bir satış ortağı bağlantısı (varsa, genellikle bu kullanıcı arayüzünün markalı bir sürümü). Lütfen kendi durum tespitinizi yapın.",
+            "table_description": "Aşağıdaki tablo, şu anda HomePesa UI ile entegre olan tüm Ağ Geçitleri ve Köprüleri listelemektedir, bu herhangi bir onayı yansıtmamaktadır. Adı (alfabetik olarak sıralanmıştır), türü (Bridge veya Gateway ve Gateway varlık öneki ise, örneğin RUDEX.BTC), daha fazla bilgi içeren açılış sayfasına bir bağlantı ve Gateways cüzdanına bir satış ortağı bağlantısı (varsa, genellikle bu kullanıcı arayüzünün markalı bir sürümü). Lütfen kendi durum tespitinizi yapın.",
             "title": "Tercih ettiğiniz Servis Sağlayıcıları seçin",
             "type": "Tip",
             "use_none": "Hiçbirini kullanma",
@@ -1213,12 +1201,12 @@
             "wallet": "Cüzdan"
         },
         "welcome": {
-            "explanation_dex": "BitShares, yerel bir merkezi olmayan değişim olan BitShares DEX'i sunar. Merkezi hizmetlere ihtiyaç duymadan tamamen blok zincirinde çalışır, hatta sipariş eşleştirme şeffaf bir şekilde zincir üzerindedir.",
+            "explanation_dex": "HomePesa, yerel bir merkezi olmayan değişim olan HomePesa DEX'i sunar. Merkezi hizmetlere ihtiyaç duymadan tamamen blok zincirinde çalışır, hatta sipariş eşleştirme şeffaf bir şekilde zincir üzerindedir.",
             "explanation_later": "Bunu daha sonra ayarlamak isterseniz, Ayarlar'da harici servis sağlayıcıları da seçebilirsiniz.",
-            "explanation_service_providers": "Varlık (token) BitShares Blockchain'de mevcut olduğu sürece her şeye karşı her şeyi takas edebilirsiniz. Kendine özgü olmayan jetonlar için, size kendi IOU'larını ('Sana borçluyum') sağlayarak BitShares DEX'te BTC gibi jetonları takas etmenize izin veren harici hizmet sağlayıcılar (Ağ Geçitleri ve Köprüler olarak adlandırılır) vardır.",
-            "explanation_what_to_do": "BitShares Kullanıcı Arayüzü'nde bu hizmet sağlayıcılardan hangisinin hazır olduğunu görmek istediğinizi seçebilirsiniz. Bunu yapmak için, 'Hizmetler Seç'i tıklayın. BitShares kullanıcı arayüzünü daha önce olduğu gibi kullanmaya devam etmek istiyorsanız, 'Şimdi değil' seçeneğini tıklayın.",
-            "first_line": "bugün size BitShares Blockchain ve etrafındaki hizmetler hakkında biraz bilgi vermek istiyoruz.",
-            "hello": "Sayın BitShares Kullanıcısı"
+            "explanation_service_providers": "Varlık (token) HomePesa Blockchain'de mevcut olduğu sürece her şeye karşı her şeyi takas edebilirsiniz. Kendine özgü olmayan jetonlar için, size kendi IOU'larını ('Sana borçluyum') sağlayarak HomePesa DEX'te BTC gibi jetonları takas etmenize izin veren harici hizmet sağlayıcılar (Ağ Geçitleri ve Köprüler olarak adlandırılır) vardır.",
+            "explanation_what_to_do": "HomePesa Kullanıcı Arayüzü'nde bu hizmet sağlayıcılardan hangisinin hazır olduğunu görmek istediğinizi seçebilirsiniz. Bunu yapmak için, 'Hizmetler Seç'i tıklayın. HomePesa kullanıcı arayüzünü daha önce olduğu gibi kullanmaya devam etmek istiyorsanız, 'Şimdi değil' seçeneğini tıklayın.",
+            "first_line": "bugün size HomePesa Blockchain ve etrafındaki hizmetler hakkında biraz bilgi vermek istiyoruz.",
+            "hello": "Sayın HomePesa Kullanıcısı"
         }
     },
     "fees": {
@@ -1236,12 +1224,12 @@
         "loading": "Yükleniyor...",
         "nosync": "Blokzinciri ile eşzamanlı değil, lütfen senkronize olana kadar bekleyin...",
         "synced": "Senkronize edildi",
-        "title": "Bitshares",
+        "title": "HomePesa",
         "unsynced": "Senkron dışında",
         "update_available": "GÜNCELLEME UYGUN"
     },
     "gateway": {
-        "add_funds": "BitShares hesabınıza hızlı ve kolay bir şekilde para ekleyin <strong>%(account)s</strong>. Bu hizmet Openledger tarafından sağlanmaktadır.",
+        "add_funds": "HomePesa hesabınıza hızlı ve kolay bir şekilde para ekleyin <strong>%(account)s</strong>. Bu hizmet Openledger tarafından sağlanmaktadır.",
         "address": "Adres",
         "address_with_memo": "%(address)s <span class=\"blocktrades-with-memo\">with memo</span> %(memo)s",
         "agreement": {
@@ -1258,17 +1246,16 @@
         "asset_to_withdraw": "Çekilecek dijital varlık:",
         "asset_unavailable": "The gateway for %(asset)s is not in service",
         "assets": {
-            "bit": "bit%(asset)s, fiyat olarak %(backed)s marketini takip eden bir türev araçtır. Bu hizmet hiçbir merkezi otorite tarafından değil, merkezsiz Bitshares blokzinciri tarafından sağlanır.",
-            "bitcny": "bitCNY, Çin Yuanı'nın Bitshares borsasındaki temsilidir. 1:1 Çin Yuanı ile değiştirilebilen bu dijital varlık Magic Wallet tarafından yürütülmektedir. Daha fazla bilgi için: https://www.magicw.net/",
-            "bridge": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için CryptoBridge tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
-            "gdex": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için Gdex tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
-            "iob": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
-            "open": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için OpenLedger tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
-            "pirate": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için PirateDEX tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
-            "rudex": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için Rudex tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
-            "trade": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için BlockTrades tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
+            "bit": "bit%(asset)s, fiyat olarak %(backed)s marketini takip eden bir türev araçtır. Bu hizmet hiçbir merkezi otorite tarafından değil, merkezsiz HomePesa blokzinciri tarafından sağlanır.",
+            "bitcny": "bitCNY, Çin Yuanı'nın HomePesa borsasındaki temsilidir. 1:1 Çin Yuanı ile değiştirilebilen bu dijital varlık Magic Wallet tarafından yürütülmektedir. Daha fazla bilgi için: https://www.magicw.net/",
+            "bridge": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için CryptoBridge tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
+            "gdex": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için Gdex tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
+            "ioxbank": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
+            "open": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için OpenLedger tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
+            "rudex": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için Rudex tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
+            "trade": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için BlockTrades tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz.",
             "win": "",
-            "xbtsx": "Bu dijital varlık Bitshares üzerinde %(backed)s işlemleri yapmanız için XBTS tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz."
+            "xbtsx": "Bu dijital varlık HomePesa üzerinde %(backed)s işlemleri yapmanız için XBTS tarafından %%100 %(backed)s rezervi ile desteklenmektedir. İstediğiniz zaman 1:1 oranında %(asset)s-%(backed)s dönüşümü yapabilirsiniz."
         },
         "balance": "Mevcut Bakiye",
         "balance_asset": "Mevcut %(asset)s bakiye",
@@ -1324,7 +1311,7 @@
                 "n_blocks": "Depozitonuz, ağdan %(blocks)s onaylandıktan sonra yatırılacaktır."
             }
         },
-        "gateway_text": "Geçitler BitShares'de tanımlı dijital varlıklardan gerçek enstrümanlara geçmenizi sağlar (ve tam tersi), örn. OPEN.BTC'den  BTC'ye.",
+        "gateway_text": "Geçitler HomePesa'de tanımlı dijital varlıklardan gerçek enstrümanlara geçmenizi sağlar (ve tam tersi), örn. OPEN.BTC'den  BTC'ye.",
         "generate": "Yeni Oluştur",
         "generate_new": "Yeni adres al",
         "generate_new_memo": "Yeni not al",
@@ -1332,7 +1319,7 @@
         "info": "Info",
         "intermediate": "Aracı hesap",
         "inventory": "Envanter",
-        "iob": {
+        "ioxbank": {
             "coming_soon": "Coming soon",
             "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
             "min_amount_error": "Please enter number >= minimum",
@@ -1353,13 +1340,6 @@
         "min_deposit_warning_asset": "IMPORTANT: Send only %(coin)s to this deposit address on the blockchain native to %(coin)s. Sending less than %(minDeposit)s %(coin)s or any other currency to this address may result in the loss of your deposit.",
         "over_limit": "Limit Reached",
         "phase_out_warning": "We recommend using the new {deposit_modal_link} and {withdraw_modal_link} modals as this page will be phased out",
-        "piratecash": {
-            "coming_soon": "Coming soon",
-            "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Please enter number >= minimum",
-            "support_block": "For support, please contact PirateCash at:",
-            "under_construction": "Under Construction"
-        },
         "please_generate_address": "Please, get new address ",
         "purchase": "%(asset)s satın al",
         "purchase_1": "%(inputAsset)s kullanarak hızlı ve kolayca %(outputAsset)s satın almak için burayı kullanabilirsiniz. Bu hizmet <a href='https://blocktrades.us/' target='blank' rel='noopener noreferrer'>Blocktrades</a> tarafından sağlanmaktadır.",
@@ -1397,7 +1377,7 @@
         "website": "Websitesini ziyaret edin",
         "withdraw": "Çek",
         "withdraw_coin": " %(coin)s (%(symbol)s) Çekme Talebi",
-        "withdraw_funds": "You are going to withdraw funds from your BitShares account to your external %(asset)s account.",
+        "withdraw_funds": "You are going to withdraw funds from your HomePesa account to your external %(asset)s account.",
         "withdraw_history_status": {
             "audited": "auditting completed",
             "auditing": "withdraw auditing",
@@ -1521,7 +1501,7 @@
             "borrow": "Borç almak",
             "buy": "Satın almak"
         },
-        "download": "BitShares UI'nin yeni sürümünü indirin",
+        "download": "HomePesa UI'nin yeni sürümünü indirin",
         "excel": ".csv dosyasını indirin",
         "eye": "Düğümü Gizle",
         "eye-striked": "Düğümü Göster",
@@ -1637,7 +1617,7 @@
             "quantity": "Quantity",
             "recipient_account": "Alıcı Hesabı",
             "recipient_name": "Alıcı Adı",
-            "recipient_name_tooltip": "Kime ödeme yapıldığını belirtmek için kendinize rastgele bir düz metin adı tanımlayabilirsiniz. BitShares hesap adı olmamalıdır.",
+            "recipient_name_tooltip": "Kime ödeme yapıldığını belirtmek için kendinize rastgele bir düz metin adı tanımlayabilirsiniz. HomePesa hesap adı olmamalıdır.",
             "submit": "Göndermek",
             "title": "İstek"
         },
@@ -1683,8 +1663,8 @@
     "migration": {
         "announcement_1": "In an effort to provide enhanced security for the web-based wallet, we are migrating it, effective immediately to the address below. Please be sure to update any bookmarks you may have.",
         "text_1": "Local wallet detected",
-        "text_2": "Please backup your wallet now and restore the backup file to <a href='https://wallet.bitshares.org' target='blank' rel='noopener noreferrer'>https://wallet.bitshares.org</a>, which will be your new address for the web wallet. Thanks for your continued support.",
-        "text_3": "Please use <a href='https://wallet.bitshares.org' target='blank' rel='noopener noreferrer'>https://wallet.bitshares.org</a> from now on, your existing credentials will let you login there as well.",
+        "text_2": "Please backup your wallet now and restore the backup file to <a href='https://wallet.homepesa.org' target='blank' rel='noopener noreferrer'>https://wallet.homepesa.org</a>, which will be your new address for the web wallet. Thanks for your continued support.",
+        "text_3": "Please use <a href='https://wallet.homepesa.org' target='blank' rel='noopener noreferrer'>https://wallet.homepesa.org</a> from now on, your existing credentials will let you login there as well.",
         "title": "Notice"
     },
     "modal": {
@@ -1699,7 +1679,7 @@
             "confirm": "ONAYLAMAK",
             "create_committee": "Komite üyesi ol",
             "from": "From",
-            "text": "After being voted in as active committee you can help set policies and parameters for the BitShares blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of BitShares and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
+            "text": "After being voted in as active committee you can help set policies and parameters for the HomePesa blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of HomePesa and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
             "url": "URL",
             "web_example": "Komite teklif gönderinizin bağlantısını girin"
         },
@@ -1805,7 +1785,7 @@
             "address_not_valid": "Geçersiz adres",
             "amount": "Çekilecek Miktar",
             "available": "Mevcut: ",
-            "bitshares_account": "Bitshares Hesabına Gönder",
+            "bitshares_account": "HomePesa Hesabına Gönder",
             "cancel": "İptal",
             "cannot_cover": "Yetersiz bakiye!",
             "estimated_value": "Tahmini değer",
@@ -1947,7 +1927,6 @@
         },
         "transfer": "{from} {amount} gönderdi - Alıcı: {to}",
         "transfer_account": "{account} adlı hesabın mülkiyeti {to} adlı hesaba devredildi.",
-        "unknown_operation": "Bilinmeyen operasyon",
         "unlisted_by": "{lister} izin listesinden {listee} adlı hesabı çıkardı.",
         "update_account": "{account} hesap verilerini güncelledi",
         "vesting_balance_withdraw": "{account} bekleyen bakiyeyi çekti - Miktar: {amount}",
@@ -2072,7 +2051,7 @@
             "add_prediction": "Bir tahmin, teminatı ile birlikte tahmin piyasası varlığının piyasasına bir limit emri olarak yansıtılır. Bu, bir satın alma emri (tahmine katılıyorsunuz) veya tahmin piyasa varlığının daha önce ödünç alınmış bir satış emri (tahmine katılmıyorsunuz) oluşturmanıza olanak tanır. Ayrıca, blok zincirindeki mevcut limit emirlerinden birinin eşleşmesiyle ilişkili olan aşağıda listelenen mevcut tahminlerden birine de karşı çıkabilirsiniz.",
             "create_prediction_market_asset": "Tahmin piyasası, SmartCoin'in özel bir türüdür. Bu, bu amaç için uyarlanmış girdilerle böyle bir tahmin piyasası varlığı oluşturmanıza olanak tanır.",
             "hide_invalid_asset": "Varsayılan olarak, aşağıdaki tablo yalnızca tutarlı bir kullanıcı deneyimi için gereken ortak standartları karşılayan tahmin piyasası varlıklarını gösterir (tahmin ve çözüm tarihi verilmiştir ve makul piyasa ücreti verilmiştir). Blok zincirinde bulunan tüm varlıkları göstermek için bu seçeneğin işaretini kaldırın ve ne yaptığınızı bildiğinizden emin olun.",
-            "hide_unknown_houses": "Varsayılan olarak, aşağıdaki tablo yalnızca, güvenilirliklerini artırmak için gereksinimleri karşılayan bilinen varlık sahiplerinin tahmini piyasa varlıklarını gösterir. Bir katılımcı olarak, varlığın gerçek dünya sonucuna göre çözülmesi için varlık sahibine güvenmeniz gerekir. Blok zincirinde bulunan tüm varlık sahiplerini göstermek için bu seçeneğin işaretini kaldırın ve ne yaptığınızı bildiğinizden emin olun. Bir tahmin piyasası varlığının sahibiyseniz ve varsayılan listeye dahil olmak istiyorsanız, lütfen BitShares topluluğu ile iletişime geçin.",
+            "hide_unknown_houses": "Varsayılan olarak, aşağıdaki tablo yalnızca, güvenilirliklerini artırmak için gereksinimleri karşılayan bilinen varlık sahiplerinin tahmini piyasa varlıklarını gösterir. Bir katılımcı olarak, varlığın gerçek dünya sonucuna göre çözülmesi için varlık sahibine güvenmeniz gerekir. Blok zincirinde bulunan tüm varlık sahiplerini göstermek için bu seçeneğin işaretini kaldırın ve ne yaptığınızı bildiğinizden emin olun. Bir tahmin piyasası varlığının sahibiyseniz ve varsayılan listeye dahil olmak istiyorsanız, lütfen HomePesa topluluğu ile iletişime geçin.",
             "oppose_is_incorrect": "Tahminin yanlış olduğunu düşünen birine karşı çıkıyorsunuz. Bu, tahminin doğru çıkacağını düşündüğünüz anlamına gelir. Tahmin piyasası varlığını satın almak ve tutmak olarak yansıyan blok zincirinde.",
             "oppose_proves_true": "Tahminin doğru olduğunu düşünen birine karşı çıkıyorsunuz. Bu, tahminin yanlış olacağını düşündüğünüz anlamına gelir. Tahmini piyasa varlığının ödünç alınması ve satılması olarak yansıyan blok zincirinde.",
             "what_is_a_prediction_market_asset": "Bir tahmin piyasası varlığı, varlığın tahmin beyanına katılmanıza veya katılmamanıza ve fikrinizin arkasına teminat koymanıza izin veren özel bir varlık türüdür. Herhangi bir kullanıcı tarafından oluşturulabilir ve eğer katılıyorsanız, varlık sahibine blok zincirindeki gerçek dünya sonucunu doğru bir şekilde yansıtması için güvenmeniz gerekir.",
@@ -2181,7 +2160,7 @@
         "walletDescription": "Otomatik olarak bir bin dosyası oluşturulacaktır. Lütfen indirin ve güvenli bir yerde saklayın. Gelecekte hesabınıza giriş yapmak için bu dosyayı yüklemeniz gerekecek.",
         "walletLoginByValue": "Bin dosyası + Şifre",
         "walletModelTitle": "Bin dosyasına göre",
-        "walletNote": "BitShares'in kullanıcı şifrelerini saklamadığını ve şifre kaybından sonra kullanıcı hesaplarını kurtaramayacağını lütfen unutmayın.",
+        "walletNote": "HomePesa'in kullanıcı şifrelerini saklamadığını ve şifre kaybından sonra kullanıcı hesaplarını kurtaramayacağını lütfen unutmayın.",
         "whyBinFile": "Neden bir .bin dosyasına ihtiyacım var?"
     },
     "scaled_orders": {
@@ -2375,7 +2354,7 @@
         "borrow": {
             "borrow_tooltip": "Bu özelliği Gösterge Tablonuzda Teminat Pozisyonları sekmesi altında veya Borsada Ödünç Al'ı tıklayarak da bulabilirsiniz.",
             "choose": "Bir pozisyon oluşturmak istediğiniz SmartCoin'i seçin",
-            "description": "Teminatı kilitleyerek BitShares Blockchain'den bir BitAsset ödünç alın (örn. bitUSD, bitCNY, vb.)",
+            "description": "Teminatı kilitleyerek HomePesa Blockchain'den bir BitAsset ödünç alın (örn. bitUSD, bitCNY, vb.)",
             "do_it": "Haydi Yapalım şunu",
             "get_started": "Başlamak",
             "navigate_with_keys": "SmartCoin üretiminin mekanizması aşağıdaki adımlarda anlatılacaktır. Gezinmek için ok tuşlarını da kullanabilirsiniz.",
@@ -2389,7 +2368,7 @@
                 "title_within": "Faydaları nelerdir?"
             },
             "steps_concept": {
-                "text": "Teminatlandırılmış Borç Pozisyonu, BitShares Blockchain'in her kullanıcısının teminat sağlayarak SmartCoins (MPA) oluşturmasını sağlar. Teminat, siz oluşturduğunuz SmartCoin'leri geri ödeyene kadar kilitlenir. SmartCoin'i BitShares Blockchain'den etkin bir şekilde ödünç alıyorsunuz.",
+                "text": "Teminatlandırılmış Borç Pozisyonu, HomePesa Blockchain'in her kullanıcısının teminat sağlayarak SmartCoins (MPA) oluşturmasını sağlar. Teminat, siz oluşturduğunuz SmartCoin'leri geri ödeyene kadar kilitlenir. SmartCoin'i HomePesa Blockchain'den etkin bir şekilde ödünç alıyorsunuz.",
                 "text_legend": "Örnek bitUSD: BTS'yi bitUSD ödünç almak için teminat olarak sağlayın",
                 "title": "Konsept",
                 "title_within": "Teminatlı Borç Pozisyonu nedir?"
@@ -2400,7 +2379,7 @@
                 "title_within": ""
             },
             "steps_introduction": {
-                "text": "Teminat yatırmayı ve SmartCoins üretimini yönetmek için BitShares Blockchain'den bu yerel dApp'yi kullanın.",
+                "text": "Teminat yatırmayı ve SmartCoins üretimini yönetmek için HomePesa Blockchain'den bu yerel dApp'yi kullanın.",
                 "title_within": "Akıllı Paralar (Piyasa Sabitlenmiş Varlıklar, MAP'ler) oluşturulacak yer burasıdır."
             },
             "steps_risks": {
@@ -2510,7 +2489,7 @@
             "title": "Zamanlı transfer"
         },
         "voting": {
-            "description": "BitShares Blockchain'in stratejik kararlarını ve ilerlemesini etkilemek için blok üreticilerine, komite üyelerine ve işçi tekliflerine oy verin.",
+            "description": "HomePesa Blockchain'in stratejik kararlarını ve ilerlemesini etkilemek için blok üreticilerine, komite üyelerine ve işçi tekliflerine oy verin.",
             "title": "Oylama"
         }
     },
@@ -2521,7 +2500,7 @@
     },
     "tooltip": {
         "add_memo_field": "Add memo text field",
-        "borrow": "Blokzincirinden %(asset)s borç al. Bu işlem ile belirli bir miktar teminat belirleyerek Bitshares'in akıllı kontrat sistemi aracılığıyla dijital ürün borç alabilirsiniz. Borcu ödediğinizde teminat da serbest kalacaktır.",
+        "borrow": "Blokzincirinden %(asset)s borç al. Bu işlem ile belirli bir miktar teminat belirleyerek HomePesa'in akıllı kontrat sistemi aracılığıyla dijital ürün borç alabilirsiniz. Borcu ödediğinizde teminat da serbest kalacaktır.",
         "borrow_disabled": "%(asset)s is in global settlement. Margin positions can't be created until it is revived. See asset details page for more information",
         "bridge": "Köprüler, herhangi bir harici varlığın yatırılmasına ve istenen ağ geçidi varlığına anında ticaret yapılmasına izin verir",
         "bridge_TRADE": "BlockTrades, varlıkların anında ticaretini destekleyen bir köprüdür. Ayrıntılar ve şartlar https://blocktrades.us adresinde bulunabilir.",
@@ -2534,7 +2513,6 @@
         "copy_tip": "Metni kopyalamak için tıklayın",
         "cr_danger": "Pozisyonun teminat seviyesi itfa değerinin altındadır. Teminat oranını en az %(mr)s yapacak şekilde teminat yatırabilir ya da pozisyonu kapatabilirsiniz.",
         "cr_warning": "Pozisyonun teminat seviyesi düşük durumdadır ve %(mr)s seviyesinin altına düştüğünde teminat tamamlama çağrısı yapılacaktır.",
-        "create_lock_periods": "Lock Periods",
         "debug_report": "Bulduğunuz bir hatayı veya beklenmeyen davranışı bildirin. Tarayıcı konsolu günlüğünü görmek, bir ekran görüntüsü oluşturmak ve sorununuzu en iyi nasıl bildireceğinize ilişkin talimatlar için tıklayın.",
         "deposit_tip": "Yatıma işlemini tamamlamak için aşağıdaki adrese %(asset)s gönderin. Transfer işleminiz onaylandığı zaman bakiyenizi yüklenecektir. Aşağıda bir işem açıklaması (memo) belirtilmişse transfere o açıklamayı eklemeniz ZORUNLUDUR.",
         "disconnected": "Bir API düğümüne bağlı değilsiniz, yeniden yüklemeyi veya Ayarlar'da yeni bir erişim noktası ayarlamayı deneyin.",
@@ -2542,7 +2520,7 @@
         "filter_ops": "İşlem türüne göre listeyi filtrelemek için burayı kullanabilirsiniz.",
         "follow_user": "Bu kullanıcıyı takip ediyorsunuz",
         "follow_user_add": "Bu kullanıcıyı takip etmek için tıklayın",
-        "gateway": "Ağ geçitleri, gerçek varlık tarafından desteklenen BitShares Blockchain üzerinde IOU'lar sağlar",
+        "gateway": "Ağ geçitleri, gerçek varlık tarafından desteklenen HomePesa Blockchain üzerinde IOU'lar sağlar",
         "generate": "Oluşturulan parola, tarayıcınız tarafından yerel olarak oluşturulmuştur. Sizden başka kimsenin buna erişimi yok. Aşağıya yapıştırın ve bir kopyasını güvenli bir yere kaydedin",
         "global_settle": "This asset is globally settled. Settling it will let you convert your holdings of %(asset)s to %(backingAsset)s instantly, at the global settlement price (visible in exchange header or asset details page).",
         "global_settle_price": "This is the price at which settle orders will execute. This asset is globally settled, thus settlement orders will execute instantly",
@@ -2550,7 +2528,7 @@
         "lack_funds": "İşlemi gerçekleştirmek için yeterli fon yok",
         "latest_price": "Piyasadaki gerçekleşen son işlemin fiyat değeri",
         "legacy_explanation": "Yinelenen, spam olan veya başlatılmış ancak 2 aydan uzun süredir etkin olmayan teklifleri gizler.",
-        "login": "Bitshares cüzdanında geleneksel oturum açma-kapatma yoktur, bunun yerine cüzdanınız <b>kilitli</b> ve <b>açık</b> konumlarından birinde tutulur. Cüzdanınız kilitli olduğunda herhangi bir işlem yapılamaz, yalnızca gözlemci olunabilir.",
+        "login": "HomePesa cüzdanında geleneksel oturum açma-kapatma yoktur, bunun yerine cüzdanınız <b>kilitli</b> ve <b>açık</b> konumlarından birinde tutulur. Cüzdanınız kilitli olduğunda herhangi bir işlem yapılamaz, yalnızca gözlemci olunabilir.",
         "login-tooltip": {
             "incorrectPassword": {
                 "begin": "Başka bir şifre girin veya deneyin",
@@ -2840,7 +2818,7 @@
         "free": "Free",
         "from": "Gönderen",
         "header": "Transfer detayları",
-        "header_subheader": "Transferler, diğer BitShares Hesap Sahiplerine para göndermek için kullanılır",
+        "header_subheader": "Transferler, diğer HomePesa Hesap Sahiplerine para göndermek için kullanılır",
         "header_subheader_propose": "Propose to send funds from one %(wallet_name)s account to another. The BY account is the account proposing the transaction.",
         "memo": "Açıklama",
         "memo_unlock": "Açıklamayı görmek için cüzdan kilidini açın.",
@@ -2913,7 +2891,7 @@
     },
     "voting": {
         "create_ticket": "Kilit 1 {asset}",
-        "description": "BitShares blok zinciri, çekirdek tokeni BTS sahiplerinin blok üreticilerine (tanıklara), komite üyelerine (blockchain yönetimi), işçi tekliflerine (BSIP'ler/Anketler aracılığıyla görevler ve stratejik kararlar için geri ödeme) oy vermelerine olanak tanır.",
+        "description": "HomePesa blok zinciri, çekirdek tokeni BTS sahiplerinin blok üreticilerine (tanıklara), komite üyelerine (blockchain yönetimi), işçi tekliflerine (BSIP'ler/Anketler aracılığıyla görevler ve stratejik kararlar için geri ödeme) oy vermelerine olanak tanır.",
         "increase_voting_power": "Kilit Oluştur",
         "ticket_explanation": "Çekirdek jeton BTS'yi kilitleyerek oylama gücü elde edin.",
         "title": "Oylama"
@@ -2997,7 +2975,7 @@
         "create_importkeys_text": "Özel anahtarınızı aktarmak için öncelikle bir cüzdan oluşturmalısınız, bunun için lütfen aşağıdaki formu doldurun.",
         "create_password": "Şifre kullanarak yeni bir hesap oluştur.",
         "create_success": "Tebrikler! Hesabınız oluşturuldu.",
-        "create_text": "Bitshares cüzdanınız tamamen kendi bilgisayarınızda tutulur ve cüzdan bilgileriniz ya da şifreniz siz paylaşmadığınız sürece kimseyle paylaşılmaz.",
+        "create_text": "HomePesa cüzdanınız tamamen kendi bilgisayarınızda tutulur ve cüzdan bilgileriniz ya da şifreniz siz paylaşmadığınız sürece kimseyle paylaşılmaz.",
         "create_w_a": "Ücretsiz hesap oluşturun",
         "create_wallet": "Cüzdan Oluştur",
         "create_wallet_backup": "Yedeklenmiş cüzdanı aktar.",
@@ -3018,14 +2996,14 @@
         "first_account_paid": "TekAnahtarınızı, şifrenizi veya .bin dosyasını güvende tutmazsanız, bilgisayarınızda oluşacak herhangi bir sorun ya da güncelleme nedeniyle cüzdanınıza erişimi kaybedebilirsiniz. Bu durumda cüzdanınızdaki dijital varlıkları geri getirmenin hiçbir yolu yoktur.",
         "generated": "Oluşturulan şifre",
         "go_get_started": "Başlarken",
-        "has_wallet": "Bitshares hesabı açtığınızda cüzdanınızın kontrolü tamamen size aittir. Bir başka kişi sizin cüzdanınızı kontrol edemez. Cüzdana erişim için gerekli olan TekAnahtar bilgisayarınızda şifreli olarak saklanır.",
+        "has_wallet": "HomePesa hesabı açtığınızda cüzdanınızın kontrolü tamamen size aittir. Bir başka kişi sizin cüzdanınızı kontrol edemez. Cüzdana erişim için gerekli olan TekAnahtar bilgisayarınızda şifreli olarak saklanır.",
         "import_20_notice1": "İlk önce BTS 2.0+ YEDEĞİNİZİ içeri aktarın ",
         "import_20_notice2": "(eğer varsa)",
         "import_backup": "Yedekten geri yükle",
         "import_backup_choose": "Lütfen yedekleme dosyasını seçin. Bu işlem esnasında dosya kendi bilgisayarınızdan dışarıya asla aktarılmaz, bütün işlem bilgisayarınızda gerçekleşir.",
         "import_balance": "Bakiyeyi aktar.",
         "import_bts": "BTS 0.9.3c anahtar aktarma",
-        "import_bts1": "BitShares 0.9.3c den aktarım",
+        "import_bts1": "HomePesa 0.9.3c den aktarım",
         "import_key_success": "İşleminiz başarıyla tamamlandı!",
         "import_keys": "İçeri Anahtar Aktar",
         "import_keys_tool": "Anahtar Aktarım Aracı",
@@ -3054,7 +3032,7 @@
         "no_balance": "Bakiye talebi yok",
         "no_wallet": "Cüzdanınız bulunmamaktadır.",
         "noneed_backup": "Cüzdanınız daha önceden yedeklenmiş görünüyor.",
-        "not_first_account": "Zaten bir Bitshares hesabı ile giriş yapılmış, bu yüzden yeni oluşturacağınız her hesap için ağ ücreti ödemeniz gerekmektedir.",
+        "not_first_account": "Zaten bir HomePesa hesabı ile giriş yapılmış, bu yüzden yeni oluşturacağınız her hesap için ağ ücreti ödemeniz gerekmektedir.",
         "ok_done": "Tamam, beni kontrol paneline götür",
         "pass_incorrect": "Yanlış parola",
         "pass_length": "Şifreniz en az %(minLength)s karakter uzunluğunda olmalıdır. İdeal olarak minimum 20 karakterlik bir şifre kullanmalı, ve harf-rakam-sembol kombinasyonlarını içeren bir şifre seçmelisiniz.",
@@ -3093,7 +3071,7 @@
         "tips_dashboard": "Kontrol panelinize bakın",
         "tips_deposit": "Para yatır",
         "tips_explore": "Başarılı bir şekilde bir hesap oluşturduğunuza ve yedeği indirdiğinize göre, şimdi başlama zamanı. Keşfetmeye başlamak için aşağıdaki bağlantılardan birine tıklayın.",
-        "tips_explore_pass": "Hesabınız başarıyla oluşturulmuştur. Soldaki bağlantılardan birine tıklayarak Bitshares Merkezsiz Kriptopara Borsası'nı keşfedin!",
+        "tips_explore_pass": "Hesabınız başarıyla oluşturulmuştur. Soldaki bağlantılardan birine tıklayarak HomePesa Merkezsiz Kriptopara Borsası'nı keşfedin!",
         "tips_header": "Aynı bağlantıları üst menüde ve hesap adınızın yanındaki açılır menüde de bulabilirsiniz.",
         "tips_login": "ÖNEMLİ: Burada oturum açma/çıkış işlevi yoktur, yalnızca işlem yapmak istediğinizde cüzdanınızın kilidini açarsınız.",
         "tips_settings": "Ayarları değiştir",

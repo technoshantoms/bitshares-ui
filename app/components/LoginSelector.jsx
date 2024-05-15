@@ -164,9 +164,9 @@ class LoginSelector extends React.Component {
                             <Link
                                 id="account_login_button"
                                 to={
-                                    getAllowedLogins().includes("password")
-                                        ? "/create-account/password"
-                                        : "/create-account/wallet"
+                                    getAllowedLogins().includes("wallet")
+                                        ? "/create-account/wallet"
+                                        : "/create-account/password"
                                 }
                                 className="button primary"
                                 data-intro={translator.translate(
@@ -179,10 +179,6 @@ class LoginSelector extends React.Component {
                             <span
                                 className="button hollow primary"
                                 onClick={() => {
-                                    SettingsActions.changeSetting.defer({
-                                        setting: "passwordLogin",
-                                        value: true
-                                    });
                                     WalletUnlockActions.unlock().catch(
                                         () => {}
                                     );
@@ -192,37 +188,6 @@ class LoginSelector extends React.Component {
                             </span>
                         </div>
 
-                        {getAllowedLogins().includes("wallet") && (
-                            <div className="additional-account-options">
-                                <h5 style={{textAlign: "center"}}>
-                                    <TranslateWithLinks
-                                        string="account.optional.formatter"
-                                        keys={[
-                                            {
-                                                type: "link",
-                                                value: "/wallet/backup/restore",
-                                                translation:
-                                                    "account.optional.restore_link",
-                                                dataIntro: translator.translate(
-                                                    "walkthrough.restore_account"
-                                                ),
-                                                arg: "restore_link"
-                                            },
-                                            {
-                                                type: "link",
-                                                value: "/create-account/wallet",
-                                                translation:
-                                                    "account.optional.restore_form",
-                                                dataIntro: translator.translate(
-                                                    "walkthrough.create_local_wallet"
-                                                ),
-                                                arg: "restore_form"
-                                            }
-                                        ]}
-                                    />
-                                </h5>
-                            </div>
-                        )}
                         {getAllowedLogins().includes("wallet") && (
                             <Route
                                 path="/create-account/wallet"
