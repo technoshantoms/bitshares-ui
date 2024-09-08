@@ -336,8 +336,8 @@ class MyMarkets extends React.Component {
             lookupBase: null,
             inputValue: "",
             minWidth: "100%",
-            findBaseInput: "TEST",
-            activeFindBase: "TEST"
+            findBaseInput: "CLOUD",
+            activeFindBase: "CLOUD"
         };
 
         this._setMinWidth = this._setMinWidth.bind(this);
@@ -827,7 +827,7 @@ class MyMarkets extends React.Component {
         }
 
         // Add some default base options
-        // let preferredBases = [coreSymbol, "BTC", "TEST", "CNY"];
+        // let preferredBases = [coreSymbol, "BTC", "CLOUD", "CNY"];
 
         /* In the find-market tab, only use market tab 0 */
         if (!myMarketTab) activeMarketTab = 0;

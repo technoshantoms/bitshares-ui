@@ -93,9 +93,9 @@ export function getDefaultLogin() {
  */
 export function getUnits() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["CLOUD"];
     }
-    return ["TEST", "USD", "CNY", "EUR", "KES"];
+    return ["CLOUD", "USD", "CNY", "EUR", "KES"];
 }
 
 export function getDefaultMarket() {
@@ -112,9 +112,9 @@ export function getDefaultMarket() {
  */
 export function getMyMarketsBases() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["CLOUD"];
     }
-    return ["TEST", "USD", "CNY", "EUR", "KES"];
+    return ["CLOUD", "USD", "CNY", "EUR", "KES"];
 }
 
 /**
@@ -124,13 +124,13 @@ export function getMyMarketsBases() {
  */
 export function getMyMarketsQuotes() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["CLOUD"];
     }
     let tokens = {
         nativeTokens: [
             "BTC",
             "BTC1.0",
-            "TEST",
+            "CLOUD",
             "CNY",
             "CNY1.0",
             "EUR",
@@ -141,7 +141,7 @@ export function getMyMarketsQuotes() {
             "RUB1.0",
             "SILVER",
             "SILVER1.0",
-           // "TEST",
+           // "CLOUD",
             "USD1.0"
         ],
         gdexTokens: [
@@ -197,14 +197,14 @@ export function getMyMarketsQuotes() {
  */
 export function getFeaturedMarkets(quotes = []) {
     if (_isTestnet()) {
-        return [["TEST", "TEST"]];
+        return [["CLOUD", "CLOUD"]];
     }
     return [
         ["ACB", "CNY"],
-        ["ACB", "TEST"],
+        ["ACB", "CLOUD"],
         ["ACB", "EUR"],
         ["CNY", "ACB"],
-        ["TEST", "ACB"],
+        ["CLOUD", "ACB"],
         ["EUR", "ACB"]
     ].filter(a => {
         if (!quotes.length) return true;
@@ -246,7 +246,7 @@ export function allowedGateway(gateway) {
         "GDEX",
         "PIRATE",
         */
-        "TEST"
+        "CLOUD"
         /*
         "IOB",
         "CITADEL", // keep to display the warning icon, permanently disabled in gateways.js
@@ -274,7 +274,7 @@ export function getAllowedLogins() {
     if (symbol.startsWith("ACB.")) return symbol;
     if (
         get_allTokens().nativeTokens.indexOf(symbol) !== -1 ||
-        symbol == "TEST" ||
+        symbol == "CLOUD" ||
         symbol == "DEXBOT"
     )
         return symbol;
@@ -290,7 +290,7 @@ export function getConfigurationAsset() {
     if (_isTestnet()) {
         assetSymbol = "NOTIFICATIONS";
     } else {
-        assetSymbol = "TEST";
+        assetSymbol = "CLOUD";
     }
     // explanation will be parsed out of the asset description (via split)
     return {

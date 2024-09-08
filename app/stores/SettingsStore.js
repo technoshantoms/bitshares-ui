@@ -13,7 +13,7 @@ import {
     getUnits
 } from "branding";
 
-const CORE_ASSET = "TEST"; // Setting this to BTS to prevent loading issues when used with BTS chain which is the most usual case currently
+const CORE_ASSET = "CLOUD"; // Setting this to BTS to prevent loading issues when used with BTS chain which is the most usual case currently
 
 const STORAGE_KEY = "__graphene__";
 let ss = ls(STORAGE_KEY);
@@ -456,15 +456,15 @@ class SettingsStore {
                 markets_4018d784: getMyMarketsBases(),
                 markets_39f5e2ed: [
                     // TESTNET
-                    "TEST"
+                    "CLOUD"
                 ]
             };
 
             let coreAssets = {
-                markets_4018d784: "TEST",
-                markets_39f5e2ed: "TEST"
+                markets_4018d784: "CLOUD",
+                markets_39f5e2ed: "CLOUD"
             };
-            let coreAsset = coreAssets[this.starredKey] || "TEST";
+            let coreAsset = coreAssets[this.starredKey] || "CLOUD";
             /*
              * Update units depending on the chain, also make sure the 0 index
              * asset is always the correct CORE asset name

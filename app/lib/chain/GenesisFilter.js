@@ -132,9 +132,9 @@ export default class GenesisFilter {
                         }
                         var currentKey = keys.public_keys[k];
                         if (/^GPH/.test(currentKey))
-                            currentKey = "TEST" + currentKey.substring(3);
+                            currentKey = "CLOUD" + currentKey.substring(3);
                         if (this.inGenesis(currentKey)) continue;
-                        var addresses = key.addresses(currentKey, "TEST");
+                        var addresses = key.addresses(currentKey, "CLOUD");
                         var addy_found = false;
                         for (var i = 0; i < addresses.length; i++) {
                             if (this.inGenesis(addresses[i])) {
